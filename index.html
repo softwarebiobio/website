@@ -468,7 +468,7 @@
 
     const messages = {
       error: 'Hubo un error al enviar su mensaje. Por favor envíenos un email a contacto@softwarebiobio.com como alternativa.',
-      success: 'Gracias. Hemos recibido su mensaje y contactaremos con usted lo antes posible.'
+      success: 'Hemos recibido su mensaje y responderemos lo antes posible desde `contacto@softwarebiobio.com`. Por favor revise si su carpeta de SPAM ha filtrado nuestra respuesta dentro de las próximas 48 a 72 horas. Muchas gracias.'
     }
 
     try {
@@ -486,7 +486,7 @@
         modalMessage.textContent = messages.success
         modalMessage.className = ''
       } else {
-        throw new Error('Error en la respuesta del servidor. Puede enviarnos un email a contacto@softwarebiobio.com')
+        throw new Error('Error en la respuesta del servidor. Puede enviarnos un email a contacto@softwarebiobio.com y responderemos lo antes posible. Por favor revise si su carpeta de SPAM ha filtrado nuestra respuesta dentro de las próximas 48 a 72 horas. Muchas gracias.')
       }
     } catch (error) {
       console.error('Error al enviar el mensaje:', error)
