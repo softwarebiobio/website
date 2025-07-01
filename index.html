@@ -55,10 +55,43 @@
           }
       }
 
+      @keyframes pulse {
+          0%, 100% {
+              opacity: 1;
+          }
+          50% {
+              opacity: 0.6;
+          }
+      }
+
+      @keyframes flicker {
+          0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+              opacity: 0.99;
+          }
+          20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+              opacity: 0.4;
+          }
+      }
+
       .animated-gradient {
-          background: linear-gradient(-45deg, #3b82f6, #06b6d4, #2563eb, #1d4ed8);
+          background: linear-gradient(-45deg, #0891b2, #0e7490, #155e75, #164e63);
           background-size: 400% 400%;
-          animation: gradient 5s ease infinite;
+          animation: gradient 8s ease infinite;
+      }
+
+      .text-glow {
+          text-shadow: 0 0 10px rgba(6, 182, 212, 0.7), 0 0 20px rgba(6, 182, 212, 0.5), 0 0 30px rgba(6, 182, 212, 0.3);
+      }
+
+      .neon-border {
+          box-shadow: 0 0 5px rgba(6, 182, 212, 0.5), 0 0 10px rgba(6, 182, 212, 0.3), inset 0 0 5px rgba(6, 182, 212, 0.2);
+      }
+
+      .cyberpunk-grid {
+          background-image:
+              linear-gradient(0deg, transparent 24px, rgba(6, 182, 212, 0.05) 1px, transparent 25px),
+              linear-gradient(90deg, transparent 24px, rgba(6, 182, 212, 0.05) 1px, transparent 25px);
+          background-size: 25px 25px;
       }
 
       .tilt-card {
@@ -99,154 +132,159 @@
   </style>
   <script data-goatcounter="https://softwarebiobio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
-<body class="bg-gray-50 overflow-x-hidden">
+<body class="bg-black overflow-x-hidden">
 
 <!-- Loader -->
 <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-black">
   <div class="relative w-24 h-24">
-    <div class="absolute inset-0 border-4 border-white/20 rounded-full"></div>
-    <div class="absolute inset-0 border-4 border-t-white rounded-full animate-spin"></div>
+    <div class="absolute inset-0 border-4 border-cyan-500/20 rounded-full"></div>
+    <div class="absolute inset-0 border-4 border-t-cyan-400 rounded-full animate-spin"></div>
   </div>
 </div>
 
 <!-- Header con navegación mejorada -->
-<header class="bg-slate-900 backdrop-blur bg-opacity-60 text-white fixed w-full z-50">
+<header class="bg-slate-900 backdrop-blur-md bg-opacity-70 text-white fixed w-full z-50 border-b border-cyan-500/20">
   <nav class="container mx-auto p-4 flex justify-between items-center" role="navigation" aria-label="Main">
-    <a href="#intro" class="font-montserrat text-2xl font-bold" aria-label="Inicio">Software BioBio</a>
+    <a href="#intro" class="font-montserrat text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500" aria-label="Inicio">Software BioBio</a>
     <div class="md:hidden">
       <button id="hamburger" class="flex flex-col items-center justify-center space-y-1">
-        <span class="block w-6 h-0.5 bg-white"></span>
-        <span class="block w-6 h-0.5 bg-white"></span>
-        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-cyan-400"></span>
+        <span class="block w-6 h-0.5 bg-cyan-400"></span>
+        <span class="block w-6 h-0.5 bg-cyan-400"></span>
       </button>
     </div>
-    <ul class="hidden md:flex space-x-4" role="menubar">
-      <li role="none"><a href="#intro" class="nav-link p-2 hover:bg-white rounded-lg hover:text-slate-800"
+    <ul class="hidden md:flex space-x-6" role="menubar">
+      <li role="none"><a href="#intro" class="nav-link p-2 relative overflow-hidden font-light tracking-wide hover:text-cyan-400 transition-colors duration-300"
                          role="menuitem">Inicio</a></li>
-      <li role="none"><a href="#services" class="nav-link p-2 hover:bg-white rounded-lg hover:text-slate-800"
+      <li role="none"><a href="#services" class="nav-link p-2 relative overflow-hidden font-light tracking-wide hover:text-cyan-400 transition-colors duration-300"
                          role="menuitem">Servicios</a></li>
-      <li role="none"><a href="#clients" class="nav-link p-2 hover:bg-white rounded-lg hover:text-slate-800"
+      <li role="none"><a href="#clients" class="nav-link p-2 relative overflow-hidden font-light tracking-wide hover:text-cyan-400 transition-colors duration-300"
                          role="menuitem">Clientes</a></li>
-      <li role="none"><a href="#contact" class="nav-link p-2 hover:bg-white rounded-lg hover:text-slate-800"
+      <li role="none"><a href="#contact" class="nav-link p-2 relative overflow-hidden font-light tracking-wide hover:text-cyan-400 transition-colors duration-300"
                          role="menuitem">Contacto</a></li>
     </ul>
   </nav>
 </header>
 
 <!-- Menú móvil -->
-<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-black/90 z-40">
-  <div class="flex flex-col items-center justify-center h-full">
-    <a href="#intro" class="text-white text-2xl py-4">Inicio</a>
-    <a href="#services" class="text-white text-2xl py-4">Servicios</a>
-    <a href="#clients" class="text-white text-2xl py-4">Clientes</a>
-    <a href="#contact" class="text-white text-2xl py-4">Contacto</a>
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-black/95 z-40 backdrop-blur-lg">
+  <div class="flex flex-col items-center justify-center h-full space-y-8">
+    <a href="#intro" class="text-cyan-400 text-2xl py-2 font-light tracking-widest hover:text-white transition-colors duration-300">Inicio</a>
+    <a href="#services" class="text-cyan-400 text-2xl py-2 font-light tracking-widest hover:text-white transition-colors duration-300">Servicios</a>
+    <a href="#clients" class="text-cyan-400 text-2xl py-2 font-light tracking-widest hover:text-white transition-colors duration-300">Clientes</a>
+    <a href="#contact" class="text-cyan-400 text-2xl py-2 font-light tracking-widest hover:text-white transition-colors duration-300">Contacto</a>
   </div>
 </div>
 
+<section id="intro" class="bg-black min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-azulmasoscuro to-black opacity-80 z-0"></div>
+  <div class="absolute inset-0 bg-[url('images/fondo7.webp.jpeg')] bg-cover bg-center opacity-20 z-0"></div>
 
-<section id="intro" class="animated-gradient min-h-screen flex items-center justify-center px-4">
-  <div class="max-w-5xl mx-auto text-center space-y-8" data-aos="fade-up">
-    <h1 class="text-5xl md:text-7xl font-extralight text-white tracking-tight">
+  <!-- Cyberpunk grid lines -->
+  <div class="absolute inset-0 z-0 opacity-10">
+    <div class="h-full w-full bg-[linear-gradient(0deg,transparent_24px,cyan_1px,transparent_25px),linear-gradient(90deg,transparent_24px,cyan_1px,transparent_25px)] bg-[size:25px_25px]"></div>
+  </div>
+
+  <div class="max-w-5xl mx-auto text-center space-y-10 z-10 relative" data-aos="fade-up">
+    <h1 class="text-5xl md:text-7xl font-extralight text-white tracking-tight leading-none">
       <span class="font-bold">Soluciones</span>
-      <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
-        <span>Informáticas</span>.
-    </span>
+      <span class="font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-[0_0_5px_rgba(6,182,212,0.5)]">
+        <span>Informáticas</span>
+      </span>
+      <span class="text-cyan-400 font-light">.</span>
     </h1>
 
-    <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-montserrat">
+    <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-montserrat font-light tracking-wide">
       Servicios. Desarrollos. Integraciones.
     </p>
     <a href="#contact">
       <button
-        class="mt-4 group relative px-8 py-4 bg-white/10 backdrop-blur overflow-hidden font-montserrat rounded-lg transition-all duration-300">
-                    <span class="relative z-10 text-white group-hover:text-black transition-colors duration-300">
-                        Contactar
-                    </span>
-        <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform
-          duration-300 origin-left"></div>
+        class="mt-6 group relative px-10 py-4 bg-transparent overflow-hidden font-montserrat rounded border border-cyan-500/50 transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+        <span class="relative z-10 text-cyan-400 group-hover:text-white transition-colors duration-300 font-light tracking-wider">
+          CONTACTAR
+        </span>
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
       </button>
     </a>
   </div>
 </section>
 
 
-<section id="services" class="min-h-screen bg-gradient-to-b from-white to-gray-100 py-32">
-  <div class="max-w-7xl mx-auto px-4">
+<section id="services" class="min-h-screen bg-black py-32 relative">
+  <div class="absolute inset-0 bg-gradient-to-b from-slate-900 to-black opacity-90 z-0"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(0deg,transparent_49px,rgba(6,182,212,0.1)_1px,transparent_50px),linear-gradient(90deg,transparent_49px,rgba(6,182,212,0.1)_1px,transparent_50px)] bg-[size:50px_50px] z-0"></div>
 
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
     <div class="text-center mb-24">
-      <h2 class="text-4xl md:text-6xl font-light tracking-tight text-gray-900">
+      <h2 class="text-4xl md:text-6xl font-light tracking-tight text-white">
         Herramientas Sencillas
-        <span class="block p-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-500 font-bold">
+        <span class="block p-2 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 font-bold drop-shadow-[0_0_5px_rgba(6,182,212,0.5)]">
             Tecnología sofisticada.
         </span>
       </h2>
-      <p class="mt-4 text-xl text-gray-600">
+      <p class="mt-4 text-xl text-gray-400 font-light tracking-wide">
         Eficacia. Elegancia. Usabilidad.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
       <!-- Soluciones en la Nube -->
-      <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-stretch justify-evenly">
-        <div class="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full mb-4">
-          <i class="fas fa-cloud"></i>
+      <div class="bg-slate-900/80 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 flex flex-col items-stretch justify-evenly hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300 group">
+        <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-md mb-6 group-hover:shadow-[0_0_10px_rgba(6,182,212,0.5)] transition-all duration-300">
+          <i class="fas fa-cloud text-xl"></i>
         </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Soluciones en la Nube</h3>
-        <p class="text-gray-600">
+        <h3 class="text-xl font-light text-cyan-400 mb-4 tracking-wide">Soluciones en la Nube</h3>
+        <p class="text-gray-300 font-light">
           Modernizamos tu infraestructura con arquitecturas escalables como microservicios y serverless. Diseñamos
           soluciones que optimizan costos y mejoran la eficiencia de tu negocio.
         </p>
-        <ul class="text-gray-600 mt-4 space-y-2">
-          <li>✔ Migración de Monolitos a Microservicios</li>
-          <li>✔ Integración Continua</li>
-          <li>✔ Servicios Cloud</li>
+        <ul class="text-gray-400 mt-6 space-y-3">
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> Migración de Monolitos a Microservicios</li>
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> Integración Continua</li>
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> Servicios Cloud</li>
         </ul>
       </div>
 
       <!-- Telemetría e IoT -->
-      <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-stretch justify-evenly">
-        <div class="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full mb-4">
-          <i class="fas fa-signal"></i>
+      <div class="bg-slate-900/80 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 flex flex-col items-stretch justify-evenly hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300 group">
+        <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-md mb-6 group-hover:shadow-[0_0_10px_rgba(6,182,212,0.5)] transition-all duration-300">
+          <i class="fas fa-signal text-xl"></i>
         </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Telemetría e IoT</h3>
-        <p class="text-gray-600">
+        <h3 class="text-xl font-light text-cyan-400 mb-4 tracking-wide">Telemetría e IoT</h3>
+        <p class="text-gray-300 font-light">
           Diseñamos sensores personalizados y sistemas IoT que capturan datos en tiempo real, automatizan procesos y
           transforman tus operaciones en decisiones estratégicas.
         </p>
-        <ul class="text-gray-600 mt-4 space-y-2">
-          <li>✔ Monitoreo IoT</li>
-          <li>✔ Sensores Personalizados</li>
-          <li>✔ Automatización de Procesos</li>
+        <ul class="text-gray-400 mt-6 space-y-3">
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> Monitoreo IoT</li>
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> Sensores Personalizados</li>
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> Automatización de Procesos</li>
         </ul>
       </div>
 
       <!-- Desarrollo Personalizado -->
-      <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-stretch justify-evenly">
-        <div class="flex items-center justify-center w-12 h-12 bg-purple-500 text-white rounded-full mb-4">
-          <i class="fas fa-code"></i>
+      <div class="bg-slate-900/80 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8 flex flex-col items-stretch justify-evenly hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300 group">
+        <div class="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-md mb-6 group-hover:shadow-[0_0_10px_rgba(6,182,212,0.5)] transition-all duration-300">
+          <i class="fas fa-code text-xl"></i>
         </div>
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">Desarrollo Personalizado</h3>
-        <p class="text-gray-600">
+        <h3 class="text-xl font-light text-cyan-400 mb-4 tracking-wide">Desarrollo Personalizado</h3>
+        <p class="text-gray-300 font-light">
           Creamos soluciones a medida, desde aplicaciones móviles y plataformas web hasta herramientas con Inteligencia
           Artificial y Realidad Aumentada, adaptadas a tus necesidades.
         </p>
-        <ul class="text-gray-600 mt-4 space-y-2">
-          <li>✔ APIs y Microservicios</li>
-          <li>✔ Aplicaciones Móviles y Web</li>
-          <li>✔ AR/VR/IA</li>
+        <ul class="text-gray-400 mt-6 space-y-3">
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> APIs y Microservicios</li>
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> Aplicaciones Móviles y Web</li>
+          <li class="flex items-center"><span class="text-cyan-400 mr-2">›</span> AR/VR/IA</li>
         </ul>
       </div>
-
-
     </div>
-
 
     <div class="mt-24 text-center">
       <a href="#contact"
-         class="inline-flex items-center px-12 py-6 text-lg text-white font-light rounded-full bg-gradient-to-r from-blue-600 to-green-500 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
-        Comencemos tu Proyecto
-        <svg class="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+         class="group inline-flex items-center px-12 py-5 text-lg text-white font-light border border-cyan-500/50 rounded hover:border-cyan-400 bg-slate-900/50 backdrop-blur-sm hover:shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all duration-300">
+        <span class="mr-3 text-cyan-400 group-hover:text-white transition-colors duration-300">Comencemos tu Proyecto</span>
+        <svg class="w-6 h-6 text-cyan-400 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor"
              viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
@@ -256,83 +294,86 @@
 </section>
 
 
-<section id="contact" class="py-32 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-light text-center mb-24">
-      Contacta <span class="font-bold">con nosotros</span>
+<section id="contact" class="py-32 bg-black text-white relative">
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-azulmasoscuro opacity-90 z-0"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_49px,rgba(6,182,212,0.1)_1px,transparent_50px),linear-gradient(135deg,transparent_49px,rgba(6,182,212,0.1)_1px,transparent_50px)] bg-[size:50px_50px] z-0"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <h2 class="text-4xl font-light text-center mb-24 tracking-wide">
+      Contacta <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-[0_0_5px_rgba(6,182,212,0.5)]">con nosotros</span>
     </h2>
 
     <div class="grid md:grid-cols-2 gap-12">
       <!-- Formulario de contacto -->
-      <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl" data-aos="fade-right">
+      <div class="bg-slate-900/50 backdrop-blur-md p-8 rounded-lg border border-cyan-500/20 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-500" data-aos="fade-right">
         <form id="softwarebiobio-contacto" netlify class="space-y-6">
           <div>
-            <label for="name" class="block text-sm font-medium mb-2">Nombre</label>
+            <label for="name" class="block text-sm font-light mb-2 text-gray-300 tracking-wide">Nombre</label>
             <input type="text"
                    id="name"
                    name="name"
                    required
-                   class="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:border-blue-400 focus:ring-2 focus:ring-blue-400 transition-colors"
+                   class="w-full px-4 py-3 rounded-md bg-slate-800/50 border border-cyan-500/30 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors text-white"
                    placeholder="Tu nombre completo">
           </div>
 
           <div>
-            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+            <label for="email" class="block text-sm font-light mb-2 text-gray-300 tracking-wide">Email</label>
             <input type="email"
                    id="email"
                    name="email"
                    required
-                   class="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:border-blue-400 focus:ring-2 focus:ring-blue-400 transition-colors"
+                   class="w-full px-4 py-3 rounded-md bg-slate-800/50 border border-cyan-500/30 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors text-white"
                    placeholder="tu@email.com">
           </div>
 
           <div>
-            <label for="message" class="block text-sm font-medium mb-2">Mensaje</label>
+            <label for="message" class="block text-sm font-light mb-2 text-gray-300 tracking-wide">Mensaje</label>
             <textarea id="message"
                       name="message"
                       required
                       rows="4"
-                      class="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 focus:border-blue-400 focus:ring-2 focus:ring-blue-400 transition-colors"
+                      class="w-full px-4 py-3 rounded-md bg-slate-800/50 border border-cyan-500/30 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors text-white"
                       placeholder="Cuéntanos sobre tu proyecto..."></textarea>
           </div>
 
           <button type="submit"
                   id="submit-button"
-                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center">
-            Enviar Mensaje
+                  class="w-full bg-gradient-to-r from-cyan-500/80 to-blue-600/80 hover:from-cyan-500 hover:to-blue-600 text-white font-light py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center tracking-wider hover:shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+            ENVIAR MENSAJE
           </button>
         </form>
       </div>
 
       <!-- Información de contacto -->
       <div class="space-y-8" data-aos="fade-left">
-        <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl">
-          <h3 class="text-xl font-semibold mb-4">Ubicación</h3>
-          <p class="flex items-center">
-            <i class="fas fa-map-marker-alt mr-4 text-blue-400"></i>
+        <div class="bg-slate-900/50 backdrop-blur-md p-8 rounded-lg border border-cyan-500/20 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-500">
+          <h3 class="text-xl font-light mb-4 text-cyan-400 tracking-wide">Ubicación</h3>
+          <p class="flex items-center text-gray-300 font-light">
+            <i class="fas fa-map-marker-alt mr-4 text-cyan-400"></i>
             Concepción, Región del Biobío, Chile
           </p>
         </div>
 
-        <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl">
-          <h3 class="text-xl font-semibold mb-4">Contacto Directo</h3>
-          <p class="flex items-center mb-4">
-            <i class="fas fa-envelope mr-4 text-blue-400"></i>
+        <div class="bg-slate-900/50 backdrop-blur-md p-8 rounded-lg border border-cyan-500/20 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-500">
+          <h3 class="text-xl font-light mb-4 text-cyan-400 tracking-wide">Contacto Directo</h3>
+          <p class="flex items-center text-gray-300 font-light">
+            <i class="fas fa-envelope mr-4 text-cyan-400"></i>
             contacto@softwarebiobio.com
           </p>
         </div>
 
-        <div class="bg-white/10 backdrop-blur-lg p-8 rounded-2xl">
-          <h3 class="text-xl font-semibold mb-4">Redes Sociales</h3>
-          <div class="flex space-x-4">
+        <div class="bg-slate-900/50 backdrop-blur-md p-8 rounded-lg border border-cyan-500/20 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-500">
+          <h3 class="text-xl font-light mb-4 text-cyan-400 tracking-wide">Redes Sociales</h3>
+          <div class="flex space-x-6">
             <a href="https://linkedin.com/company/softwarebiobio"
                target="_blank"
-               class="hover:text-blue-400 transition-colors duration-300">
+               class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
               <i class="fab fa-linkedin text-2xl"></i>
             </a>
             <a href="https://github.com/softwarebiobio"
                target="_blank"
-               class="hover:text-gray-400 transition-colors duration-300">
+               class="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
               <i class="fab fa-github text-2xl"></i>
             </a>
           </div>
@@ -343,34 +384,58 @@
 </section>
 
 
-<section id="clients" class="py-32 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-light text-center mb-16">
-      Algunos clientes <span class="font-bold">destacados</span>
+<section id="clients" class="py-32 bg-black relative">
+  <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-black opacity-90 z-0"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(90deg,transparent_49px,rgba(6,182,212,0.05)_1px,transparent_50px),linear-gradient(0deg,transparent_49px,rgba(6,182,212,0.05)_1px,transparent_50px)] bg-[size:50px_50px] z-0"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <h2 class="text-4xl font-light text-center mb-20 text-white tracking-wide">
+      Algunos clientes <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-[0_0_5px_rgba(6,182,212,0.5)]">destacados</span>
     </h2>
 
-    <div class="flex flex-wrap justify-center items-center gap-16">
-      <img src="images/logos/logo_btgconsulting.png" alt="Logo BTG Consulting"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_municonce.png" alt="Logo Municipalidad de Concepción"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_copec.png" alt="Logo Copec"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_udec.png" alt="Logo Universidad de Concepción"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_cefop.png" alt="Logo Centro de Óptica y Fotónica"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_masjubilaciones.png" alt="Logo Masjubilaciones"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_mci.png" alt="Logo MCI Electronics"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_ucsc.png" alt="Logo Universidad Católica de la Santísima Concepción"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_woodtechms.png" alt="Logo WoodtechMS"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100">
-      <img src="images/logos/logo_uber-cornershop2.png"
-           class="h-12 opacity-50 transition-opacity duration-300 hover:opacity-100"
-           alt="Logo Uber">
+    <div class="flex flex-wrap justify-center items-center gap-16 max-w-5xl mx-auto">
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_btgconsulting.png" alt="Logo BTG Consulting"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_municonce.png" alt="Logo Municipalidad de Concepción"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_copec.png" alt="Logo Copec"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_udec.png" alt="Logo Universidad de Concepción"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_cefop.png" alt="Logo Centro de Óptica y Fotónica"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_masjubilaciones.png" alt="Logo Masjubilaciones"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_mci.png" alt="Logo MCI Electronics"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_ucsc.png" alt="Logo Universidad Católica de la Santísima Concepción"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
+
+      <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_cornershop.png"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100"
+             alt="Logo Uber">
+      </div>
+        <div class="h-16 w-auto p-2 bg-slate-900/50 backdrop-blur-sm border border-cyan-500/10 rounded hover:border-cyan-500/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all duration-300">
+        <img src="images/logos/logo_woodtechms.png" alt="Logo WoodtechMS"
+             class="h-full w-auto brightness-0 invert opacity-70 transition-all duration-300 hover:opacity-100">
+      </div>
     </div>
   </div>
 </section>
@@ -378,48 +443,50 @@
 
 <!-- Modal de confirmación -->
 <div id="modal"
-     class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50 transition-all">
-  <div class="bg-white p-8 rounded-2xl max-w-md mx-4">
-    <p id="modal-message" class="text-center text-xl p-2 mb-12"></p>
+     class="fixed inset-0 bg-black/80 backdrop-blur-md hidden flex items-center justify-center z-50 transition-all">
+  <div class="bg-slate-900 border border-cyan-500/30 p-8 rounded-lg max-w-md mx-4 shadow-[0_0_30px_rgba(6,182,212,0.3)]">
+    <p id="modal-message" class="text-center text-lg text-gray-300 p-2 mb-12 font-light"></p>
     <button onclick="this.parentElement.parentElement.classList.add('hidden')"
-            class="w-full bg-blue-600 hover:bg-blue-700 text-white mt-8 py-2 px-4 rounded-lg transition-all duration-300 shadow-2xl hover:shadow-md">
-      Cerrar
+            class="w-full bg-gradient-to-r from-cyan-500/80 to-blue-600/80 hover:from-cyan-500 hover:to-blue-600 text-white font-light py-3 px-6 rounded-md transition-all duration-300 tracking-wider hover:shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+      CERRAR
     </button>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="bg-slate-900 text-white py-16">
-  <div class="container mx-auto px-4">
+<footer class="bg-black text-white py-16 relative">
+  <div class="absolute inset-0 bg-gradient-to-t from-black to-slate-900/50 z-0"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_49px,rgba(6,182,212,0.05)_1px,transparent_50px)] bg-[size:50px_50px] z-0"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
     <div class="grid md:grid-cols-3 gap-12">
       <!-- Columna 1: Logo y descripción -->
       <div class="space-y-4">
-        <h3 class="text-2xl font-bold">Software BioBio</h3>
-        <p class="text-gray-400">
+        <h3 class="text-2xl font-light tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Software BioBio</h3>
+        <p class="text-gray-400 font-light">
           Transformando ideas en soluciones tecnológicas innovadoras desde el corazón de la región del Biobío.
         </p>
       </div>
 
       <!-- Columna 2: Enlaces rápidos -->
       <div class="space-y-4">
-        <h4 class="text-xl font-semibold">Enlaces Rápidos</h4>
-        <ul class="space-y-2">
-          <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Servicios</a></li>
-
-          <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+        <h4 class="text-xl font-light text-cyan-400 tracking-wide">Enlaces Rápidos</h4>
+        <ul class="space-y-3">
+          <li><a href="#services" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 font-light">Servicios</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-cyan-400 transition-colors duration-300 font-light">Contacto</a></li>
         </ul>
       </div>
     </div>
 
     <!-- Línea divisoria -->
-    <div class="border-t border-gray-800 my-8"></div>
+    <div class="border-t border-cyan-900/30 my-8"></div>
 
     <!-- Copyright y créditos -->
-    <div class="text-center text-gray-400">
+    <div class="text-center text-gray-500 font-light">
       <p>&copy; 2024 Software BioBio. Todos los derechos reservados.</p>
       <p class="mt-2">
         Diseñado y desarrollado con
-        <i class="fas fa-heart text-red-500"></i>
+        <i class="fas fa-heart text-cyan-500"></i>
         en Concepción, Chile
       </p>
     </div>
