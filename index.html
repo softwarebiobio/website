@@ -61,21 +61,6 @@
           animation: gradient 5s ease infinite;
       }
 
-      .custom-cursor {
-          width: 20px;
-          height: 20px;
-          border: 2px solid white;
-          border-radius: 50%;
-          position: fixed;
-          pointer-events: none;
-          z-index: 9999;
-          transition: transform 0.3s ease;
-      }
-
-      .custom-cursor.hover {
-          transform: scale(1.5);
-      }
-
       .tilt-card {
           transform-style: preserve-3d;
           perspective: 1000px;
@@ -115,8 +100,6 @@
   <script data-goatcounter="https://softwarebiobio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body class="bg-gray-50 overflow-x-hidden">
-<!-- Cursor personalizado -->
-<div class="custom-cursor"></div>
 
 <!-- Loader -->
 <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-black">
@@ -463,20 +446,6 @@
     }, 500)
   })
 
-  // Cursor personalizado
-  document.addEventListener('mousemove', (e) => {
-    const cursor = document.querySelector('.custom-cursor')
-    cursor.style.left = e.clientX + 'px'
-    cursor.style.top = e.clientY + 'px'
-  })
-
-  document.addEventListener('mousedown', () => {
-    document.querySelector('.custom-cursor').classList.add('hover')
-  })
-
-  document.addEventListener('mouseup', () => {
-    document.querySelector('.custom-cursor').classList.remove('hover')
-  })
 
   // Efecto de hover en links y botones
   const interactiveElements = document.querySelectorAll('a, button')
