@@ -5,10 +5,11 @@ module.exports = {
     extend: {
       colors: {
         'azulmasoscuro': '#2c2c64',
-        'azuloscuro': '#3b3bc8'
+        'azuloscuro': '#3b3bc8',
+        'amarillo': '#fbbf24',
+        'indigoprofundo': '#312e81'
       }
     }
   },
   plugins: []
 }
-
