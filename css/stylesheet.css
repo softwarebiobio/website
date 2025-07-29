@@ -19,7 +19,6 @@
     --color-slate-300: oklch(86.9% 0.022 252.894);
     --color-slate-400: oklch(70.4% 0.04 256.788);
     --color-slate-500: oklch(55.4% 0.046 257.417);
-    --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-slate-700: oklch(37.2% 0.044 257.287);
     --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-slate-900: oklch(20.8% 0.042 265.755);
@@ -935,9 +934,6 @@
   }
   .text-cyan-400 {
     color: var(--color-cyan-400);
-  }
-  .text-sky-300 {
-    color: var(--color-sky-300);
   }
   .text-slate-100 {
     color: var(--color-slate-100);
