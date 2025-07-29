@@ -934,7 +934,7 @@
 
     const messages = {
       error: 'Hubo un error al enviar su mensaje. Por favor envíenos un email a contacto@softwarebiobio.com como alternativa.',
-      success: 'Hemos recibido su mensaje y responderemos lo antes posible desde contacto@softwarebiobio.com.  Si no ha recibido respuesta nuestra en 3 días, sugerimos confirmar si su servidor o gestor de correo electrónico no haya erróneamente filtrado nuestra respuesta como Spam.</div>.'
+      success: 'Hemos recibido su mensaje y responderemos lo antes posible desde contacto@softwarebiobio.com.  Si no ha recibido respuesta nuestra en 3 días, sugerimos confirmar si su servidor o gestor de correo electrónico no haya erróneamente filtrado nuestra respuesta como Spam.'
     }
 
     try {
@@ -957,7 +957,7 @@
       if (response.ok) {
         e.target.reset()
         modalMessage.textContent = messages.success
-        modalMessage.className = ''
+        modalMessage.className = 'text-sky-300'
       } else {
         throw new Error('Error en la respuesta del servidor')
       }
