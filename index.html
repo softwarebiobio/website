@@ -286,14 +286,37 @@
 
   <!-- Simplified decorative elements - more minimal and clean -->
   <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-500/3 rounded-full blur-3xl"></div>
-  
-  <!-- Clean, minimal decorative element -->
-  <svg class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-slate-300/3" 
-       viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="49.5" stroke="currentColor" stroke-width="0.25" />
-    <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.25" />
-  </svg>
 
+  <!-- Clean, minimal decorative element -->
+  <svg
+    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-slate-300/3"
+    viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g class="rotating" style="transform-origin: 50px 50px">
+      <!-- Horizontal lines -->
+      <path d="M0 50 L100 50" stroke="currentColor" stroke-width="0.25" />
+      <path d="M0 30 L100 30" stroke="currentColor" stroke-width="0.25" />
+      <path d="M0 70 L100 70" stroke="currentColor" stroke-width="0.25" />
+
+      <!-- Vertical lines -->
+      <path d="M50 0 L50 100" stroke="currentColor" stroke-width="0.25" />
+      <path d="M30 0 L30 100" stroke="currentColor" stroke-width="0.25" />
+      <path d="M70 0 L70 100" stroke="currentColor" stroke-width="0.25" />
+
+      <!-- Diagonal lines -->
+      <path d="M0 0 L100 100" stroke="currentColor" stroke-width="0.25" />
+      <path d="M100 0 L0 100" stroke="currentColor" stroke-width="0.25" />
+
+      <!-- Circles -->
+      <circle cx="50" cy="50" r="49.5" stroke="currentColor" stroke-width="0.25" />
+      <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.25" />
+      <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="0.25" />
+
+      <!-- Arc lines for 3D effect -->
+      <path d="M20,50 A30,10 0 0,1 80,50" stroke="currentColor" stroke-width="0.25" />
+      <path d="M20,30 A30,10 0 0,1 80,30" stroke="currentColor" stroke-width="0.25" />
+      <path d="M20,70 A30,10 0 0,1 80,70" stroke="currentColor" stroke-width="0.25" />
+    </g>
+  </svg>
   <div class="max-w-5xl mx-auto z-10 relative flex flex-col items-center justify-center" data-aos="fade-up">
     <div class="text-center mb-16">
       <h1 class="text-5xl md:text-7xl font-light text-slate-100 tracking-tight leading-none mb-6">
