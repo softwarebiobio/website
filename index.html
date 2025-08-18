@@ -175,15 +175,19 @@
           transform: translateY(-2px);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
+  /* Skip link styles */
+  .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+  .skip-link:focus{position:fixed;left:1rem;top:1rem;width:auto;height:auto;overflow:visible;background:#1f2937;color:#fff;padding:.75rem 1rem;border-radius:.5rem;z-index:10000;outline:2px solid #93c5fd}
   </style>
   <script data-goatcounter="https://softwarebiobio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body class="bg-slate-900 overflow-x-hidden">
 
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
 <!-- Loader -->
-<div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900">
-  <svg class="w-24 h-24" viewBox="0 0 100 100">
+<div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900" role="status" aria-live="polite" aria-label="Cargando">
+  <svg class="w-24 h-24" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
     <circle cx="50" cy="50" r="40" stroke="rgba(6, 182, 212, 0.2)" stroke-width="4" fill="none" />
     <circle cx="50" cy="50" r="40" stroke="#06b6d4" stroke-width="4" fill="none" stroke-dasharray="251.2"
             stroke-dashoffset="251.2" class="dash-animation" />
@@ -204,7 +208,8 @@
 
     <div class="md:hidden">
       <button id="hamburger"
-              class="flex flex-col items-center justify-center space-y-1.5 p-2 rounded-lg">
+              class="flex flex-col items-center justify-center space-y-1.5 p-2 rounded-lg"
+              type="button" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
         <span class="block w-5 h-0.5 bg-slate-200/80 transition-all duration-300"></span>
         <span class="block w-5 h-0.5 bg-slate-200/80 transition-all duration-300"></span>
         <span class="block w-5 h-0.5 bg-slate-200/80 transition-all duration-300"></span>
@@ -245,7 +250,7 @@
       <li role="none">
         <a href="#contact"
            class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-300 hover:text-slate-100 transition-colors duration-300"
-           role="menuitem">
+           role="menuitem" aria-label="Ir a la sección de contacto">
            <span class="relative">
              Contacto
         
@@ -257,7 +262,7 @@
 </header>
 
 <!-- Mobile menu - clean and minimal -->
-<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-slate-900/95 backdrop-blur-lg z-40">
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-slate-900/95 backdrop-blur-lg z-40" aria-hidden="true">
   <div class="flex flex-col items-center justify-center h-full space-y-12">
     <a href="#intro"
        class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
@@ -282,6 +287,7 @@
   </div>
 </div>
 
+<main id="main-content" role="main" tabindex="-1">
 <section id="intro" class="bg-slate-900 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
 
   <!-- Simplified decorative elements - more minimal and clean -->
@@ -290,7 +296,7 @@
   <!-- Clean, minimal decorative element -->
   <svg
     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-slate-300/3"
-    viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
     <g class="rotating" style="transform-origin: 50px 50px">
       <!-- Horizontal lines -->
       <path d="M0 50 L100 50" stroke="currentColor" stroke-width="0.25" />
@@ -331,12 +337,10 @@
         electro-informática, telemetría y aplicaciones web de distinto tipo.
       </p>
 
-      <a href="#contact" class="inline-block">
-        <button class="button px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40">
+      <a href="#contact" role="button" class="button inline-block px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40">
           <span class="text-slate-400 font-light text-sm tracking-wide">
             INICIAR UNA CONVERSACIÓN
           </span>
-        </button>
       </a>
     </div>
 
@@ -344,7 +348,7 @@
   </div>
   <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20">
     <span class="text-slate-400/40 text-xs tracking-wide mb-3 font-light">DESCUBRIR</span>
-    <svg class="w-6 h-10 text-slate-400/30" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="w-6 h-10 text-slate-400/30" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
       <rect x="11" y="0" width="2" height="40" rx="1" fill="currentColor" opacity="0.3" />
       <circle cx="12" cy="8" r="2" fill="currentColor" class="animate-bounce" />
     </svg>
@@ -575,13 +579,11 @@
           garantiza una solución cohesiva y un único punto de contacto responsable.
         </p>
 
-        <a href="#contact" class="inline-block">
-          <button class="button px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 flex items-center">
+        <a href="#contact" role="button" class="button inline-block px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 flex items-center">
             <span class="text-slate-400 font-light text-sm tracking-wide mr-3">¿TIENE UN DESAFÍO TECNOLÓGICO?</span>
-            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </button>
         </a>
       </div>
     </div>
@@ -803,11 +805,11 @@
       </div>
     </div>
 </section>
-
+</main>
 
 <!-- Modal de confirmación - clean and minimal -->
 <div id="modal"
-     class="fixed inset-0 bg-slate-900/80 backdrop-blur-lg hidden flex items-center justify-center z-50 transition-all">
+     class="fixed inset-0 bg-slate-900/80 backdrop-blur-lg hidden flex items-center justify-center z-50 transition-all" role="dialog" aria-modal="true" aria-labelledby="modal-message">
   <div class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 max-w-md mx-4">
     <p id="modal-message" class="text-center text-slate-300/60 font-light p-2 mb-10"></p>
     <button onclick="this.parentElement.parentElement.classList.add('hidden')"
@@ -1009,10 +1011,13 @@
 
   hamburger.addEventListener('click', function() {
     mobileMenu.classList.toggle('hidden')
+    const isOpen = !mobileMenu.classList.contains('hidden')
+    hamburger.setAttribute('aria-expanded', String(isOpen))
+    mobileMenu.setAttribute('aria-hidden', String(!isOpen))
 
     // Animar las barras del hamburger
     const bars = this.querySelectorAll('span')
-    if (mobileMenu.classList.contains('hidden')) {
+    if (!isOpen) {
       // Restaurar hamburger
       bars[0].style.transform = 'rotate(0) translateY(0)'
       bars[1].style.opacity = '1'
