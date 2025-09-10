@@ -26,7 +26,7 @@
   <meta name="author" content="Software BioBio">
   <meta name="theme-color" content="#3b82f6">
   <link rel="stylesheet" href="/css/stylesheet.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
       @import url('https://fonts.googleapis.com/css2?family=Play:wght@300;400;500;600;700&display=swap');
@@ -185,7 +185,6 @@
 
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-<!-- Loader -->
 <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900" role="status" aria-live="polite" aria-label="Cargando">
   <svg class="w-24 h-24" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
     <circle cx="50" cy="50" r="40" stroke="rgba(6, 182, 212, 0.2)" stroke-width="4" fill="none" />
@@ -197,7 +196,6 @@
   </svg>
 </div>
 
-<!-- Header with clean, minimal navigation -->
 <header class="fixed w-full z-50 text-slate-100 bg-slate-800/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-700/5">
   <nav class="container text-transparent mx-auto px-8 py-5 flex justify-between items-center" role="navigation" aria-label="Main">
     <a href="#intro"
@@ -261,7 +259,6 @@
   </nav>
 </header>
 
-<!-- Mobile menu - clean and minimal -->
 <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-slate-900/95 backdrop-blur-lg z-40" aria-hidden="true">
   <div class="flex flex-col items-center justify-center h-full space-y-12">
     <a href="#intro"
@@ -290,10 +287,8 @@
 <main id="main-content" role="main" tabindex="-1">
 <section id="intro" class="bg-slate-900 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
 
-  <!-- Simplified decorative elements - more minimal and clean -->
-  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-500/3 rounded-full blur-3xl"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-500/3 rounded-full blur-3xl"></div>
 
-  <!-- Clean, minimal decorative element -->
   <svg
     class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-slate-300/3"
     viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -807,7 +802,6 @@
 </section>
 </main>
 
-<!-- Modal de confirmación - clean and minimal -->
 <div id="modal"
      class="fixed inset-0 bg-slate-900/80 backdrop-blur-lg hidden flex items-center justify-center z-50 transition-all" role="dialog" aria-modal="true" aria-labelledby="modal-message">
   <div class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 max-w-md mx-4">
@@ -819,11 +813,9 @@
   </div>
 </div>
 
-<!-- Footer - clean and minimal -->
 <footer class="bg-slate-900 text-slate-100 py-24 relative overflow-hidden">
 
-  <!-- Minimal decorative element -->
-  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-slate-500/2 rounded-full blur-3xl"></div>
+<div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-slate-500/2 rounded-full blur-3xl"></div>
 
   <div class="max-w-6xl mx-auto px-6 relative z-10">
     <div class="grid md:grid-cols-3 gap-20">
@@ -911,10 +903,8 @@
       </div>
     </div>
 
-    <!-- Línea divisoria -->
     <div class="border-t border-slate-700/5 my-12"></div>
 
-    <!-- Copyright y créditos -->
     <div class="text-center text-slate-400/30 font-light text-xs">
       <p>&copy; 2025 Software BioBio. Todos los derechos reservados.</p>
       <p class="mt-3 flex items-center justify-center">
@@ -929,10 +919,9 @@
   </div>
 </footer>
 
-<!-- Scripts -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  // Inicializar AOS (Animate On Scroll)
+
   AOS.init({
     duration: 1000,
     once: true,
@@ -940,7 +929,6 @@
     easing: 'ease-out-cubic'
   })
 
-  // Remover el loader cuando la página esté completamente cargada
   window.addEventListener('load', () => {
     const loader = document.getElementById('loader')
     loader.classList.add('opacity-0')
@@ -949,7 +937,6 @@
     }, 800)
   })
 
-  // Manejador del formulario de contacto
   document.getElementById('softwarebiobio-contacto').addEventListener('submit', async function(e) {
     e.preventDefault()
     const formData = new FormData(e.target)
@@ -1005,7 +992,6 @@
     }
   })
 
-  // Manejador del menú móvil
   const hamburger = document.getElementById('hamburger')
   const mobileMenu = document.getElementById('mobile-menu')
 
@@ -1015,7 +1001,7 @@
     hamburger.setAttribute('aria-expanded', String(isOpen))
     mobileMenu.setAttribute('aria-hidden', String(!isOpen))
 
-    // Animar las barras del hamburger
+    // Animación en las barras del hamburger
     const bars = this.querySelectorAll('span')
     if (!isOpen) {
       // Restaurar hamburger
