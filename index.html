@@ -219,9 +219,9 @@
         <a href="#intro"
            class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-300 hover:text-slate-100 transition-colors duration-300"
            role="menuitem">
-           <span class="relative">
-             Inicio
-        
+           <span class="relative flex items-center gap-2">
+             <i class="fa-solid fa-house text-slate-400/80 text-xs" aria-hidden="true"></i>
+             <span>Inicio</span>
            </span>
         </a>
       </li>
@@ -229,9 +229,9 @@
         <a href="#services"
            class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-300 hover:text-slate-100 transition-colors duration-300"
            role="menuitem">
-           <span class="relative">
-             Servicios
-        
+           <span class="relative flex items-center gap-2">
+             <i class="fa-solid fa-screwdriver-wrench text-slate-400/80 text-xs" aria-hidden="true"></i>
+             <span>Servicios</span>
            </span>
         </a>
       </li>
@@ -239,9 +239,9 @@
         <a href="#clients"
            class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-300 hover:text-slate-100 transition-colors duration-300"
            role="menuitem">
-           <span class="relative">
-             Clientes
-        
+           <span class="relative flex items-center gap-2">
+             <i class="fa-solid fa-users text-slate-400/80 text-xs" aria-hidden="true"></i>
+             <span>Clientes</span>
            </span>
         </a>
       </li>
@@ -263,22 +263,34 @@
   <div class="flex flex-col items-center justify-center h-full space-y-12">
     <a href="#intro"
        class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
-       <span>Inicio</span>
+       <span class="flex items-center gap-3">
+         <i class="fa-solid fa-house text-slate-300/80 text-base" aria-hidden="true"></i>
+         <span>Inicio</span>
+       </span>
        <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#services"
-       class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
-       <span>Servicios</span>
+       class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duración-300 relative group">
+       <span class="flex items-center gap-3">
+         <i class="fa-solid fa-screwdriver-wrench text-slate-300/80 text-base" aria-hidden="true"></i>
+         <span>Servicios</span>
+       </span>
        <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#clients"
        class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
-       <span>Clientes</span>
+       <span class="flex items-center gap-3">
+         <i class="fa-solid fa-users text-slate-300/80 text-base" aria-hidden="true"></i>
+         <span>Clientes</span>
+       </span>
        <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#contact"
        class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
-       <span>Contacto</span>
+       <span class="flex items-center gap-3">
+         <i class="fa-solid fa-envelope text-slate-300/80 text-base" aria-hidden="true"></i>
+         <span>Contacto</span>
+       </span>
        <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
   </div>
@@ -332,9 +344,10 @@
         electro-informática, telemetría y aplicaciones web de distinto tipo.
       </p>
 
-      <a href="#contact" role="button" class="button inline-block px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40">
+      <a href="#contact" role="button" class="button inline-block px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 animate">
           <span class="text-slate-400 font-light text-sm tracking-wide">
             INICIAR UNA CONVERSACIÓN
+            <i class="fa fa-rocket text-slate-300/80 animate-bounce" aria-hidden="true"></i>
           </span>
       </a>
     </div>
@@ -390,7 +403,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div class="flex items-start">
               <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                <i class="fas fa-satellite text-amber-400/60 text-xs"></i>
+                <i class="fa-solid fa-satellite text-amber-400/60 text-xs"></i>
               </div>
               <div>
                 <h5 class="text-slate-100 font-normal mb-3 text-base">Monitoreo</h5>
@@ -400,7 +413,7 @@
 
             <div class="flex items-start">
               <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                <i class="fas fa-exchange-alt text-amber-400/60 text-xs"></i>
+                <i class="fa-solid fa-right-left text-amber-400/60 text-xs"></i>
               </div>
               <div>
                 <h5 class="text-slate-100 font-normal mb-3 text-base">Integración</h5>
@@ -410,7 +423,7 @@
 
             <div class="flex items-start">
               <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                <i class="fas fa-chart-line text-amber-400/60 text-xs"></i>
+                <i class="fa-solid fa-chart-line text-amber-400/60 text-xs"></i>
               </div>
               <div>
                 <h5 class="text-slate-100 font-normal mb-3 text-base">Análisis</h5>
@@ -420,7 +433,7 @@
 
             <div class="flex items-start">
               <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                <i class="fas fa-bell text-amber-400/60 text-xs"></i>
+                <i class="fa-solid fa-bell text-amber-400/60 text-xs"></i>
               </div>
               <div>
                 <h5 class="text-slate-100 font-normal mb-3 text-base">Alertas</h5>
@@ -574,7 +587,7 @@
           garantiza una solución cohesiva y un único punto de contacto responsable.
         </p>
 
-        <a href="#contact" role="button" class="button inline-block px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 flex items-center">
+        <a href="#contact" role="button" class="button flex px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300  hover:bg-slate-500/20 hover:border-slate-400/40 items-center justify-center">
             <span class="text-slate-400 font-light text-sm tracking-wide mr-3">¿TIENE UN DESAFÍO TECNOLÓGICO?</span>
             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -607,7 +620,7 @@
       <!-- Formulario de contacto - clean and minimal -->
       <div class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-700 hover:border-slate-400/10 hover:shadow-xl hover:shadow-slate-950">
         <h3 class="text-2xl md:text-3xl font-light text-white mb-10 tracking-tight">
-          Iniciar una Conversación
+          Contacte con nosotros
         </h3>
         <form id="softwarebiobio-contacto" netlify class="space-y-8">
           <div>
@@ -617,7 +630,7 @@
                    name="name"
                    required
                    class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
-                   placeholder="Tu nombre completo">
+                   placeholder="Su nombre completo">
           </div>
 
           <div>
@@ -627,7 +640,7 @@
                    name="email"
                    required
                    class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
-                   placeholder="tu@email.com">
+                   placeholder="su@email.com (le responderemos)">
           </div>
 
           <div>
@@ -637,16 +650,14 @@
                       required
                       rows="4"
                       class="w-full px-5 py-4 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
-                      placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                      placeholder="Cuéntenos brevemente sobre su proyecto..."></textarea>
           </div>
 
           <button type="submit"
                   id="submit-button"
                   class="w-full px-10 py-4 bg-slate-500/10 backdrop-blur-sm rounded-lg border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 flex items-center justify-center">
-            <span class="text-slate-400 font-light tracking-wide text-sm mr-2">INICIAR UNA CONVERSACIÓN</span>
-            <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            <span class="text-slate-400 font-light tracking-wide text-sm mr-2">ENVIAR MENSAJE DE CONTACTO <i class="fas fa-paper-plane"></i></span>
+
           </button>
         </form>
       </div>
@@ -710,13 +721,13 @@
                 <a href="https://linkedin.com/company/softwarebiobio"
                    target="_blank"
                    class="text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
-                  <i class="fab fa-linkedin text-lg"></i>
+                  <i class="fa-brands fa-linkedin text-lg"></i>
                   <span class="ml-2 text-sm font-light">LinkedIn</span>
                 </a>
                 <a href="https://github.com/softwarebiobio"
                    target="_blank"
                    class="text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
-                  <i class="fab fa-github text-lg"></i>
+                  <i class="fa-brands fa-github text-lg"></i>
                   <span class="ml-2 text-sm font-light">GitHub</span>
                 </a>
               </div>
@@ -946,7 +957,7 @@
 
     const messages = {
       error: 'Hubo un error al enviar su mensaje. Por favor envíenos un email a contacto@softwarebiobio.com como alternativa.',
-      success: 'Su mensaje ha sido enviado. Responderemos desde contacto@softwarebiobio.com. Sugerimos confirmar si su servidor o gestor de correo electrónico no haya filtrado erróneamente nuestra respuesta como Spam.'
+      success: 'Su mensaje ha sido enviado. Responderemos desde contacto@softwarebiobio.com. Sugerimos confirmar que su servidor o gestor de correo electrónico no haya filtrado erróneamente nuestra respuesta como Spam.'
     }
 
     try {

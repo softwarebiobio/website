@@ -9,7 +9,6 @@
     monospace;
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-500: oklch(76.9% 0.188 70.08);
-    --color-amber-600: oklch(66.6% 0.179 58.318);
     --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-cyan-400: oklch(78.9% 0.154 211.53);
     --color-sky-200: oklch(90.1% 0.058 230.902);
@@ -65,6 +64,7 @@
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-spin: spin 1s linear infinite;
+    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --animate-bounce: bounce 1s infinite;
     --blur-sm: 8px;
     --blur-md: 12px;
@@ -500,6 +500,9 @@
   .animate-bounce {
     animation: var(--animate-bounce);
   }
+  .animate-pulse {
+    animation: var(--animate-pulse);
+  }
   .animate-spin {
     animation: var(--animate-spin);
   }
@@ -523,6 +526,12 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
@@ -930,9 +939,6 @@
       color: color-mix(in oklab, var(--color-amber-400) 60%, transparent);
     }
   }
-  .text-amber-500 {
-    color: var(--color-amber-500);
-  }
   .text-cyan-400 {
     color: var(--color-cyan-400);
   }
@@ -978,6 +984,12 @@
       color: color-mix(in oklab, var(--color-slate-300) 70%, transparent);
     }
   }
+  .text-slate-300\/80 {
+    color: color-mix(in srgb, oklch(86.9% 0.022 252.894) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-slate-300) 80%, transparent);
+    }
+  }
   .text-slate-400 {
     color: var(--color-slate-400);
   }
@@ -997,6 +1009,12 @@
     color: color-mix(in srgb, oklch(70.4% 0.04 256.788) 60%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       color: color-mix(in oklab, var(--color-slate-400) 60%, transparent);
+    }
+  }
+  .text-slate-400\/80 {
+    color: color-mix(in srgb, oklch(70.4% 0.04 256.788) 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-slate-400) 80%, transparent);
     }
   }
   .text-transparent {
@@ -1591,6 +1609,11 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
   }
 }
 @keyframes bounce {
