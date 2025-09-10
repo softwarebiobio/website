@@ -31,7 +31,7 @@
   <style>
       @import url('https://fonts.googleapis.com/css2?family=Play:wght@300;400;500;600;700&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
-      
+
       body {
           font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, sans-serif;
           -webkit-font-smoothing: antialiased;
@@ -47,7 +47,7 @@
           font-family: 'Play', -apple-system, BlinkMacSystemFont, sans-serif;
           letter-spacing: -0.02em;
       }
-      
+
       button, .button {
           font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, sans-serif;
           letter-spacing: 0.01em;
@@ -170,14 +170,36 @@
       .button-effect {
           transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
       }
-      
+
       .button-effect:hover {
           transform: translateY(-2px);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       }
-  /* Skip link styles */
-  .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-  .skip-link:focus{position:fixed;left:1rem;top:1rem;width:auto;height:auto;overflow:visible;background:#1f2937;color:#fff;padding:.75rem 1rem;border-radius:.5rem;z-index:10000;outline:2px solid #93c5fd}
+
+      /* Skip link styles */
+      .skip-link {
+          position: absolute;
+          left: -999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden
+      }
+
+      .skip-link:focus {
+          position: fixed;
+          left: 1rem;
+          top: 1rem;
+          width: auto;
+          height: auto;
+          overflow: visible;
+          background: #1f2937;
+          color: #fff;
+          padding: .75rem 1rem;
+          border-radius: .5rem;
+          z-index: 10000;
+          outline: 2px solid #93c5fd
+      }
   </style>
   <script data-goatcounter="https://softwarebiobio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -185,7 +207,8 @@
 
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-<div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900" role="status" aria-live="polite" aria-label="Cargando">
+<div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900" role="status"
+     aria-live="polite" aria-label="Cargando">
   <svg class="w-24 h-24" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
     <circle cx="50" cy="50" r="40" stroke="rgba(6, 182, 212, 0.2)" stroke-width="4" fill="none" />
     <circle cx="50" cy="50" r="40" stroke="#06b6d4" stroke-width="4" fill="none" stroke-dasharray="251.2"
@@ -196,12 +219,14 @@
   </svg>
 </div>
 
-<header class="fixed w-full z-50 text-slate-100 bg-slate-800/50 dark:bg-slate-900/80 backdrop-blur border-b border-slate-700/5">
-  <nav class="container text-transparent mx-auto px-8 py-5 md:p-0 flex justify-between items-center" role="navigation" aria-label="Main">
+<header
+  class="fixed w-full z-50 text-slate-100 bg-slate-800/50 dark:bg-slate-900/80 backdrop-blur border-b border-slate-700/5">
+  <nav class="container text-transparent mx-auto px-8 flex justify-between items-center" role="navigation"
+       aria-label="Main">
     <a href="#intro"
-       class="text-sm md:text-md xl:text-xl font-medium tracking-tight bg-clip-text bg-gradient-to-t from-white to-slate-400 "
+       class="text-md md:text-lg xl:text-2xl font-medium tracking-tight bg-clip-text bg-gradient-to-t from-white to-slate-400 "
        aria-label="Inicio">
-        SOFTWARE BIOBIO
+      SOFTWARE BIOBIO
     </a>
 
     <div class="md:hidden">
@@ -259,7 +284,8 @@
   </nav>
 </header>
 
-<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-slate-900/95 backdrop-blur-lg z-40" aria-hidden="true">
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-slate-900/95 backdrop-blur-lg z-40"
+     aria-hidden="true">
   <div class="flex flex-col items-center justify-center h-full space-y-12">
     <a href="#intro"
        class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
@@ -267,7 +293,8 @@
          <i class="fa-solid fa-house text-slate-300/80 text-base" aria-hidden="true"></i>
          <span>Inicio</span>
        </span>
-       <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
+      <span
+        class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#services"
        class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duración-300 relative group">
@@ -275,7 +302,8 @@
          <i class="fa-solid fa-screwdriver-wrench text-slate-300/80 text-base" aria-hidden="true"></i>
          <span>Servicios</span>
        </span>
-       <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
+      <span
+        class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#clients"
        class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
@@ -283,7 +311,8 @@
          <i class="fa-solid fa-users text-slate-300/80 text-base" aria-hidden="true"></i>
          <span>Clientes</span>
        </span>
-       <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
+      <span
+        class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#contact"
        class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
@@ -291,531 +320,563 @@
          <i class="fa-solid fa-envelope text-slate-300/80 text-base" aria-hidden="true"></i>
          <span>Contacto</span>
        </span>
-       <span class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
+      <span
+        class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
   </div>
 </div>
 
 <main id="main-content" role="main" tabindex="-1">
-<section id="intro" class="bg-slate-900 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+  <section id="intro" class="bg-slate-900 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
 
-<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-500/3 rounded-full blur-3xl"></div>
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-500/3 rounded-full blur-3xl"></div>
 
-  <svg
-    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-slate-300/3"
-    viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-    <g class="rotating" style="transform-origin: 50px 50px">
-      <!-- Horizontal lines -->
-      <path d="M0 50 L100 50" stroke="currentColor" stroke-width="0.25" />
-      <path d="M0 30 L100 30" stroke="currentColor" stroke-width="0.25" />
-      <path d="M0 70 L100 70" stroke="currentColor" stroke-width="0.25" />
+    <svg
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-slate-300/3"
+      viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <g class="rotating" style="transform-origin: 50px 50px">
+        <!-- Horizontal lines -->
+        <path d="M0 50 L100 50" stroke="currentColor" stroke-width="0.25" />
+        <path d="M0 30 L100 30" stroke="currentColor" stroke-width="0.25" />
+        <path d="M0 70 L100 70" stroke="currentColor" stroke-width="0.25" />
 
-      <!-- Vertical lines -->
-      <path d="M50 0 L50 100" stroke="currentColor" stroke-width="0.25" />
-      <path d="M30 0 L30 100" stroke="currentColor" stroke-width="0.25" />
-      <path d="M70 0 L70 100" stroke="currentColor" stroke-width="0.25" />
+        <!-- Vertical lines -->
+        <path d="M50 0 L50 100" stroke="currentColor" stroke-width="0.25" />
+        <path d="M30 0 L30 100" stroke="currentColor" stroke-width="0.25" />
+        <path d="M70 0 L70 100" stroke="currentColor" stroke-width="0.25" />
 
-      <!-- Diagonal lines -->
-      <path d="M0 0 L100 100" stroke="currentColor" stroke-width="0.25" />
-      <path d="M100 0 L0 100" stroke="currentColor" stroke-width="0.25" />
+        <!-- Diagonal lines -->
+        <path d="M0 0 L100 100" stroke="currentColor" stroke-width="0.25" />
+        <path d="M100 0 L0 100" stroke="currentColor" stroke-width="0.25" />
 
-      <!-- Circles -->
-      <circle cx="50" cy="50" r="49.5" stroke="currentColor" stroke-width="0.25" />
-      <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.25" />
-      <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="0.25" />
+        <!-- Circles -->
+        <circle cx="50" cy="50" r="49.5" stroke="currentColor" stroke-width="0.25" />
+        <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.25" />
+        <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="0.25" />
 
-      <!-- Arc lines for 3D effect -->
-      <path d="M20,50 A30,10 0 0,1 80,50" stroke="currentColor" stroke-width="0.25" />
-      <path d="M20,30 A30,10 0 0,1 80,30" stroke="currentColor" stroke-width="0.25" />
-      <path d="M20,70 A30,10 0 0,1 80,70" stroke="currentColor" stroke-width="0.25" />
-    </g>
-  </svg>
-  <div class="max-w-5xl mx-auto z-10 relative flex flex-col items-center justify-center" data-aos="fade-up">
-    <div class="text-center mb-16">
-      <h1 class="text-5xl md:text-7xl font-light text-slate-100 tracking-tight leading-none mb-6">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white via-sky-300 block mb-2">Soluciones informáticas</span>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-300">
+        <!-- Arc lines for 3D effect -->
+        <path d="M20,50 A30,10 0 0,1 80,50" stroke="currentColor" stroke-width="0.25" />
+        <path d="M20,30 A30,10 0 0,1 80,30" stroke="currentColor" stroke-width="0.25" />
+        <path d="M20,70 A30,10 0 0,1 80,70" stroke="currentColor" stroke-width="0.25" />
+      </g>
+    </svg>
+    <div class="max-w-5xl mx-auto z-10 relative flex flex-col items-center justify-center" data-aos="fade-up">
+      <div class="text-center mb-16">
+        <h1 class="text-5xl md:text-7xl font-light text-slate-100 tracking-tight leading-none mb-6">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white via-sky-300 block mb-2 drop-shadow-cyan-800 drop-shadow-xl">Soluciones informáticas</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-300 drop-shadow-yellow-800 drop-shadow-xl">
           a medida
         </span>
-      </h1>
+        </h1>
 
-      <p class="text-base md:text-lg lg:text-xl text-slate-300/70 max-w-3xl mx-auto leading-relaxed font-light mb-16">
-        Somos una consultora de desarrollo con más de 15 años de experiencia profesional en la industria, especializada en proyectos de
-        electro-informática, telemetría y aplicaciones web de distinto tipo.
-      </p>
+        <p class="text-base md:text-lg lg:text-xl text-slate-300/70 max-w-3xl mx-auto leading-relaxed font-light mb-16">
+          Somos una consultora de desarrollo con más de 15 años de experiencia profesional en la industria,
+          especializada en proyectos de
+          electro-informática, telemetría y aplicaciones web de distinto tipo.
+        </p>
 
-      <a href="#contact" role="button" class="button inline-block px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40">
+        <a href="#contact" role="button"
+           class="button inline-block px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40">
           <span class="text-slate-400 font-light text-sm tracking-wide">
             INICIAR UNA CONVERSACIÓN
-            <i class="fa fa-rocket text-slate-300/80 hover:animate-bounce" aria-hidden="true"></i>
+            <i class="fa fa-rocket text-slate-300/80" aria-hidden="true"></i>
           </span>
-      </a>
+        </a>
+      </div>
+
+
     </div>
+    <a href="#services">
+      <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20 cursor-help">
+        <span class="text-slate-400/40 text-xs tracking-wide mb-3 font-light">DESCUBRIR</span>
 
+        <svg class="w-6 h-10 text-slate-400/30" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+             aria-hidden="true" focusable="false">
+          <rect x="11" y="0" width="2" height="40" rx="1" fill="currentColor" opacity="0.3" />
+          <circle cx="12" cy="33" r="8" fill="currentColor" class="animate-bounce" />
+        </svg>
 
-  </div>
-  <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20">
-    <span class="text-slate-400/40 text-xs tracking-wide mb-3 font-light">DESCUBRIR</span>
-    <svg class="w-6 h-10 text-slate-400/30" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <rect x="11" y="0" width="2" height="40" rx="1" fill="currentColor" opacity="0.3" />
-      <circle cx="12" cy="8" r="2" fill="currentColor" class="animate-bounce" />
-    </svg>
-  </div>
-</section>
+      </div>
+    </a>
+  </section>
 
-<section id="services" class="min-h-screen bg-slate-900 py-32 relative overflow-hidden">
+  <section id="services" class="min-h-screen bg-slate-900 py-32 relative overflow-hidden">
 
-  <!-- Minimal decorative elements -->
-  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80rem] h-[80rem] bg-slate-500/5 rounded-full blur-3xl"></div>
+    <!-- Minimal decorative elements -->
+    <div
+      class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80rem] h-[80rem] bg-slate-500/5 rounded-full blur-3xl"></div>
 
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
-    <div class="text-center mb-28">
-      <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-4">
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-28">
+        <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-4">
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-white">
           Qué Hacemos
         </span>
-      </h2>
-      <div class="w-20 h-px bg-slate-400/20 mx-auto"></div>
-    </div>
+        </h2>
+        <div class="w-20 h-px bg-slate-400/20 mx-auto"></div>
+      </div>
 
-    <!-- Desarrollo de Soluciones de Electroinformática -->
-    <div class="mb-40 relative">
-      <div class="flex flex-col md:flex-row items-start gap-20">
-        <div class="md:w-1/3 flex-shrink-0">
-          <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-white via-white">Electro-Informática</span>
-          </h3>
+      <!-- Desarrollo de Soluciones de Electroinformática -->
+      <div class="mb-40 relative">
+        <div class="flex flex-col md:flex-row items-start gap-20">
+          <div class="md:w-1/3 flex-shrink-0">
+            <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-white via-white">Electro-Informática</span>
+            </h3>
 
-          <p class="text-slate-300/60 font-light text-base leading-relaxed">
-            Desde el firmware hasta la plataforma de usuario, incluyendo la infraestructura. Usted obtiene una solución
-            a medida para resolver su desafío.
-          </p>
+            <p class="text-slate-300/60 font-light text-base leading-relaxed">
+              Desde el firmware hasta la plataforma de usuario, incluyendo la infraestructura. Usted obtiene una
+              solución
+              a medida para resolver su desafío.
+            </p>
+          </div>
+
+          <div
+            class="md:w-2/3 bg-slate-800/50 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+            <h4 class="text-xl md:text-2xl font-light text-white mb-8 tracking-tight">Integración de Dispositivos y
+              Protocolos</h4>
+            <p class="text-slate-300/60 font-light mb-12 text-base">
+              Hacemos que sus equipos se entiendan, traduciendo datos entre dispositivos y sistemas.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fa-solid fa-satellite text-amber-400/60 text-xs"></i>
+                </div>
+                <div>
+                  <h5 class="text-slate-100 font-normal mb-3 text-base">Monitoreo</h5>
+                  <p class="text-slate-300/50 font-light text-sm leading-relaxed">Visualización instantánea del estado
+                    de su operación</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fa-solid fa-right-left text-amber-400/60 text-xs"></i>
+                </div>
+                <div>
+                  <h5 class="text-slate-100 font-normal mb-3 text-base">Integración</h5>
+                  <p class="text-slate-300/50 font-light text-sm leading-relaxed">Conectando sistemas usando estándares
+                    y protocolos</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fa-solid fa-chart-line text-amber-400/60 text-xs"></i>
+                </div>
+                <div>
+                  <h5 class="text-slate-100 font-normal mb-3 text-base">Análisis</h5>
+                  <p class="text-slate-300/50 font-light text-sm leading-relaxed">Transformando datos brutos en
+                    información útil</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fa-solid fa-bell text-amber-400/60 text-xs"></i>
+                </div>
+                <div>
+                  <h5 class="text-slate-100 font-normal mb-3 text-base">Alertas</h5>
+                  <p class="text-slate-300/50 font-light text-sm leading-relaxed">Notificando eventos recolectados en
+                    entornos de operación</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <!-- Desarrollo Web y de Sistemas Complejos -->
+      <div class="mb-40 relative">
+        <div class="flex flex-col md:flex-row-reverse items-start gap-20">
+          <div class="md:w-1/3 flex-shrink-0">
+            <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400 via-white">Aplicaciones Web y Sistemas</span>
+            </h3>
+
+            <p class="text-slate-300/60 font-light text-base leading-relaxed">
+              Creamos plataformas de gestión, microservicios, dashboards, gestores de contenido personalizado,
+              APIs robustas y más. Nuestra experiencia abarca desde startups hasta sistemas a gran escala.
+            </p>
+          </div>
+
+          <div
+            class="md:w-2/3 bg-slate-900/90 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div>
+                <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Desarrollo Full-Stack</h4>
+                <p class="text-slate-300/60 font-light mb-8 text-base">
+                  Desarrollamos sistemas que impulsan la gestión y sus operaciones
+                </p>
+
+                <ul class="text-slate-300/50 space-y-5 font-light text-sm">
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span>
+                    <span>Arquitectura y Desarrollo</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span>
+                    <span>Soporte y Mantenimiento</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span>
+                    <span>Infraestructura y Despliegue</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Arquitectura de Sistemas</h4>
+                <p class="text-slate-300/60 font-light mb-8 text-base">
+                  Estamos capacitados para entender y evolucionar la tecnología de su negocio.
+                </p>
+
+                <ul class="text-slate-300/50 space-y-5 font-light text-sm">
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span>
+                    <span>Modelamiento de datos</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span>
+                    <span>Adopción de tecnologías (AI/VR/AR)</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span>
+                    <span>Migraciones progresivas</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consultoría y Arquitectura Técnica -->
+      <div class="mb-40 relative">
+        <div class="flex flex-col md:flex-row items-start gap-20">
+          <div class="md:w-1/3 flex-shrink-0">
+            <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400 via-white">Consultorías y Servicios</span>
+            </h3>
+
+            <p class="text-slate-300/60 font-light text-base leading-relaxed">
+              Le ayudamos a definir la mejor estrategia tecnológica para su proyecto. Aportamos más de 15 años de
+              experiencia
+              en diferentes industrias para asegurar que su inversión sea sólida y escalable.
+            </p>
+          </div>
+
+          <div
+            class="md:w-2/3 bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 hover:border-amber-400/10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div>
+                <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Asesoría y Arquitectura de
+                  Soluciones</h4>
+                <p class="text-slate-300/60 font-light mb-8 text-base">
+                  Le guiamos para tomar las decisiones tecnológicas correctas, asegurando la factibilidad de su
+                  proyecto.
+                </p>
+
+                <ul class="text-slate-300/50 space-y-5 font-light text-sm">
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span>
+                    <span>Evaluación de tecnologías</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span>
+                    <span>Diseño de arquitectura</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span>
+                    <span>Planificación estratégica</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Despliegue y Soporte
+                  Experto</h4>
+                <p class="text-slate-300/60 font-light mb-8 text-base">
+                  Integramos la gestión de servidores privados, VPS y servicios Cloud con operación y
+                  soporte técnico directo, sin intermediarios.
+                </p>
+
+                <ul class="text-slate-300/50 space-y-5 font-light text-sm">
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span>
+                    <span>Alojamiento web y correo corporativo</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span>
+                    <span>Amazon Web Services</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span>
+                    <span>VPS FreeBSD y GNU/Linux</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Commitment section - clean and minimal -->
+      <div class="mt-40 text-center">
         <div
-          class="md:w-2/3 bg-slate-800/50 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-          <h4 class="text-xl md:text-2xl font-light text-white mb-8 tracking-tight">Integración de Dispositivos y
-            Protocolos</h4>
-          <p class="text-slate-300/60 font-light mb-12 text-base">
-            Hacemos que sus equipos se entiendan, traduciendo datos entre dispositivos y sistemas.
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="flex items-start">
-              <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                <i class="fa-solid fa-satellite text-amber-400/60 text-xs"></i>
-              </div>
-              <div>
-                <h5 class="text-slate-100 font-normal mb-3 text-base">Monitoreo</h5>
-                <p class="text-slate-300/50 font-light text-sm leading-relaxed">Visualización instantánea del estado de su operación</p>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                <i class="fa-solid fa-right-left text-amber-400/60 text-xs"></i>
-              </div>
-              <div>
-                <h5 class="text-slate-100 font-normal mb-3 text-base">Integración</h5>
-                <p class="text-slate-300/50 font-light text-sm leading-relaxed">Conectando sistemas usando estándares y protocolos</p>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                <i class="fa-solid fa-chart-line text-amber-400/60 text-xs"></i>
-              </div>
-              <div>
-                <h5 class="text-slate-100 font-normal mb-3 text-base">Análisis</h5>
-                <p class="text-slate-300/50 font-light text-sm leading-relaxed">Transformando datos brutos en información útil</p>
-              </div>
-            </div>
-
-            <div class="flex items-start">
-              <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                <i class="fa-solid fa-bell text-amber-400/60 text-xs"></i>
-              </div>
-              <div>
-                <h5 class="text-slate-100 font-normal mb-3 text-base">Alertas</h5>
-                <p class="text-slate-300/50 font-light text-sm leading-relaxed">Notificando eventos recolectados en entornos de operación</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Desarrollo Web y de Sistemas Complejos -->
-    <div class="mb-40 relative">
-      <div class="flex flex-col md:flex-row-reverse items-start gap-20">
-        <div class="md:w-1/3 flex-shrink-0">
+          class="bg-slate-950/30 backdrop-blur-sm rounded-xl p-16 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10 max-w-4xl mx-auto">
           <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400 via-white">Aplicaciones Web y Sistemas</span>
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-500">Nuestro Compromiso:</span>
+            Responsabilidad Integral
           </h3>
 
-          <p class="text-slate-300/60 font-light text-base leading-relaxed">
-            Creamos plataformas de gestión, microservicios, dashboards, gestores de contenido personalizado,
-            APIs robustas y más. Nuestra experiencia abarca desde startups hasta sistemas a gran escala.
+          <p class="text-slate-300/60 font-light text-xl max-w-3xl mx-auto leading-relaxed mb-16">
+            Asumimos el desarrollo completo, desde el hardware hasta el software, incluyendo la infraestructura. Esto
+            garantiza una solución cohesiva y un único punto de contacto responsable.
           </p>
-        </div>
 
-        <div class="md:w-2/3 bg-slate-900/90 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Desarrollo Full-Stack</h4>
-              <p class="text-slate-300/60 font-light mb-8 text-base">
-                Desarrollamos sistemas que impulsan la gestión y sus operaciones
-              </p>
-
-              <ul class="text-slate-300/50 space-y-5 font-light text-sm">
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span> 
-                  <span>Arquitectura y Desarrollo</span>
-                </li>
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span> 
-                  <span>Soporte y Mantenimiento</span>
-                </li>
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span> 
-                  <span>Infraestructura y Despliegue</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Arquitectura de Sistemas</h4>
-              <p class="text-slate-300/60 font-light mb-8 text-base">
-                Estamos capacitados para entender y evolucionar la tecnología de su negocio.
-              </p>
-
-              <ul class="text-slate-300/50 space-y-5 font-light text-sm">
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span> 
-                  <span>Modelamiento de datos</span>
-                </li>
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span> 
-                  <span>Adopción de tecnologías (AI/VR/AR)</span>
-                </li>
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span> 
-                  <span>Migraciones progresivas</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Consultoría y Arquitectura Técnica -->
-    <div class="mb-40 relative">
-      <div class="flex flex-col md:flex-row items-start gap-20">
-        <div class="md:w-1/3 flex-shrink-0">
-          <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400 via-white">Consultorías y Servicios</span>
-          </h3>
-
-          <p class="text-slate-300/60 font-light text-base leading-relaxed">
-            Le ayudamos a definir la mejor estrategia tecnológica para su proyecto. Aportamos más de 15 años de experiencia
-            en diferentes industrias para asegurar que su inversión sea sólida y escalable.
-          </p>
-        </div>
-
-        <div class="md:w-2/3 bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 hover:border-amber-400/10">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Asesoría y Arquitectura de Soluciones</h4>
-              <p class="text-slate-300/60 font-light mb-8 text-base">
-                Le guiamos para tomar las decisiones tecnológicas correctas, asegurando la factibilidad de su
-                proyecto.
-              </p>
-
-              <ul class="text-slate-300/50 space-y-5 font-light text-sm">
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span> 
-                  <span>Evaluación de tecnologías</span>
-                </li>
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span> 
-                  <span>Diseño de arquitectura</span>
-                </li>
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span> 
-                  <span>Planificación estratégica</span>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Despliegue y Soporte Experto</h4>
-              <p class="text-slate-300/60 font-light mb-8 text-base">
-                Integramos la gestión de servidores privados, VPS y servicios Cloud con operación y
-                soporte técnico directo, sin intermediarios.
-              </p>
-
-              <ul class="text-slate-300/50 space-y-5 font-light text-sm">
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span> 
-                  <span>Alojamiento web y correo corporativo</span>
-                </li>
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span> 
-                  <span>Amazon Web Services</span>
-                </li>
-                <li class="flex items-center">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span> 
-                  <span>VPS FreeBSD y GNU/Linux</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Commitment section - clean and minimal -->
-    <div class="mt-40 text-center">
-      <div class="bg-slate-950/30 backdrop-blur-sm rounded-xl p-16 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10 max-w-4xl mx-auto">
-        <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-500">Nuestro Compromiso:</span> Responsabilidad Integral
-        </h3>
-
-        <p class="text-slate-300/60 font-light text-xl max-w-3xl mx-auto leading-relaxed mb-16">
-          Asumimos el desarrollo completo, desde el hardware hasta el software, incluyendo la infraestructura. Esto
-          garantiza una solución cohesiva y un único punto de contacto responsable.
-        </p>
-
-        <a href="#contact" role="button" class="button flex px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300  hover:bg-slate-500/20 hover:border-slate-400/40 items-center justify-center">
+          <a href="#contact" role="button"
+             class="button flex px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300  hover:bg-slate-500/20 hover:border-slate-400/40 items-center justify-center">
             <span class="text-slate-400 font-light text-sm tracking-wide mr-3">¿TIENE UN DESAFÍO TECNOLÓGICO?</span>
-            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
+                 focusable="false">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-        </a>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact" class="py-32 bg-slate-900 text-slate-100 relative overflow-hidden">
+  <section id="contact" class="py-32 bg-slate-900 text-slate-100 relative overflow-hidden">
 
-  <!-- Minimal decorative element -->
-  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80rem] h-[80rem] bg-slate-500/2 rounded-full blur-3xl"></div>
+    <!-- Minimal decorative element -->
+    <div
+      class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80rem] h-[80rem] bg-slate-500/2 rounded-full blur-3xl"></div>
 
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
-    <div class="text-center mb-24">
-      <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-6">
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-24">
+        <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-6">
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-white via-white">
           ¿Tiene un Desafío Tecnológico?
         </span>
-      </h2>
-      <div class="w-20 h-px bg-slate-400/20 mx-auto mb-10"></div>
-      <p class="text-xl text-slate-300/60 max-w-2xl mx-auto font-light leading-relaxed">
-        Inicie una conversación con nosotros y descubra cómo podemos ayudarle a resolver sus desafíos tecnológicos.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-      <!-- Formulario de contacto - clean and minimal -->
-      <div class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-700 hover:border-slate-400/10 hover:shadow-xl hover:shadow-slate-950">
-        <h3 class="text-2xl md:text-3xl font-light text-white mb-10 tracking-tight">
-          Contacte con nosotros
-        </h3>
-        <form id="softwarebiobio-contacto" netlify class="space-y-8">
-          <div>
-            <label for="name" class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Nombre</label>
-            <input type="text"
-                   id="name"
-                   name="name"
-                   required
-                   class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
-                   placeholder="Su nombre completo">
-          </div>
-
-          <div>
-            <label for="email" class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Email</label>
-            <input type="email"
-                   id="email"
-                   name="email"
-                   required
-                   class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
-                   placeholder="su@email.com (le responderemos)">
-          </div>
-
-          <div>
-            <label for="message" class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Mensaje</label>
-            <textarea id="message"
-                      name="message"
-                      required
-                      rows="4"
-                      class="w-full px-5 py-4 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
-                      placeholder="Cuéntenos brevemente sobre su proyecto..."></textarea>
-          </div>
-
-          <button type="submit"
-                  id="submit-button"
-                  class="w-full px-10 py-4 bg-slate-500/10 backdrop-blur-sm rounded-lg border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 flex items-center justify-center">
-            <span class="text-slate-400 font-light tracking-wide text-sm mr-2">ENVIAR MENSAJE DE CONTACTO <i class="fas fa-paper-plane"></i></span>
-
-          </button>
-        </form>
+        </h2>
+        <div class="w-20 h-px bg-slate-400/20 mx-auto mb-10"></div>
+        <p class="text-xl text-slate-300/60 max-w-2xl mx-auto font-light leading-relaxed">
+          Inicie una conversación con nosotros y descubra cómo podemos ayudarle a resolver sus desafíos tecnológicos.
+        </p>
       </div>
 
-      <!-- Información de contacto - clean and minimal -->
-      <div class="space-y-8">
+      <div class="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+        <!-- Formulario de contacto - clean and minimal -->
         <div
-          class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-          <div class="flex items-start">
-            <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-              <svg class="w-4 h-4 text-slate-400/60" viewBox="0 0 24 24" fill="none">
-                <path d="M12,3 C8.5,3 6,5.5 6,9 C6,14 12,21 12,21 C12,21 18,14 18,9 C18,5.5 15.5,3 12,3 Z"
-                      stroke="currentColor" stroke-width="1" />
-                <circle cx="12" cy="9" r="2" stroke="currentColor" stroke-width="1" />
-              </svg>
-            </div>
+          class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-700 hover:border-slate-400/10 hover:shadow-xl hover:shadow-slate-950">
+          <h3 class="text-2xl md:text-3xl font-light text-white mb-10 tracking-tight">
+            Contacte con nosotros
+          </h3>
+          <form id="softwarebiobio-contacto" netlify class="space-y-8">
             <div>
-              <h3 class="text-lg font-normal mb-2 text-slate-400 tracking-tight">Ubicación</h3>
-              <p class="text-slate-300/60 font-light">
-                Concepción, Región del Biobío, Chile
-              </p>
+              <label for="name" class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Nombre</label>
+              <input type="text"
+                     id="name"
+                     name="name"
+                     required
+                     class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
+                     placeholder="Su nombre completo">
             </div>
-          </div>
+
+            <div>
+              <label for="email" class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Email</label>
+              <input type="email"
+                     id="email"
+                     name="email"
+                     required
+                     class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
+                     placeholder="su@email.com (le responderemos)">
+            </div>
+
+            <div>
+              <label for="message"
+                     class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Mensaje</label>
+              <textarea id="message"
+                        name="message"
+                        required
+                        rows="4"
+                        class="w-full px-5 py-4 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
+                        placeholder="Cuéntenos brevemente sobre su proyecto..."></textarea>
+            </div>
+
+            <button type="submit"
+                    id="submit-button"
+                    class="w-full px-10 py-4 bg-slate-500/10 backdrop-blur-sm rounded-lg border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 flex items-center justify-center">
+              <span class="text-slate-400 font-light tracking-wide text-sm mr-2">ENVIAR MENSAJE DE CONTACTO <i
+                class="fas fa-paper-plane"></i></span>
+
+            </button>
+          </form>
         </div>
 
-        <div
-          class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-          <div class="flex items-start">
-            <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-              <svg class="w-4 h-4 text-slate-400/60" viewBox="0 0 24 24" fill="none">
-                <path d="M4,7 L10,11 L20,4" stroke="currentColor" stroke-width="1" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1" />
-                <path d="M3,7 L21,7" stroke="currentColor" stroke-width="1" />
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-normal mb-2 text-slate-400 tracking-tight">Contacto Directo</h3>
-              <p class="text-slate-300/60 font-light">
-                contacto@softwarebiobio.com
-              </p>
+        <!-- Información de contacto - clean and minimal -->
+        <div class="space-y-8">
+          <div
+            class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-4 h-4 text-slate-400/60" viewBox="0 0 24 24" fill="none">
+                  <path d="M12,3 C8.5,3 6,5.5 6,9 C6,14 12,21 12,21 C12,21 18,14 18,9 C18,5.5 15.5,3 12,3 Z"
+                        stroke="currentColor" stroke-width="1" />
+                  <circle cx="12" cy="9" r="2" stroke="currentColor" stroke-width="1" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-normal mb-2 text-slate-400 tracking-tight">Ubicación</h3>
+                <p class="text-slate-300/60 font-light">
+                  Concepción, Región del Biobío, Chile
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-          <div class="flex items-start">
-            <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-              <svg class="w-4 h-4 text-slate-400/60" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M16,8 C16,10.21 14.21,12 12,12 C9.79,12 8,10.21 8,8 C8,5.79 9.79,4 12,4 C14.21,4 16,5.79 16,8 Z"
-                  stroke="currentColor" stroke-width="1" />
-                <path d="M20,19 C20,15.5 16.5,13 12,13 C7.5,13 4,15.5 4,19" stroke="currentColor"
-                      stroke-width="1" />
-              </svg>
+          <div
+            class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-4 h-4 text-slate-400/60" viewBox="0 0 24 24" fill="none">
+                  <path d="M4,7 L10,11 L20,4" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                  <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1" />
+                  <path d="M3,7 L21,7" stroke="currentColor" stroke-width="1" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-normal mb-2 text-slate-400 tracking-tight">Contacto Directo</h3>
+                <p class="text-slate-300/60 font-light">
+                  contacto@softwarebiobio.com
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-lg font-normal mb-3 text-slate-400 tracking-tight">Redes Sociales</h3>
-              <div class="flex space-x-6">
-                <a href="https://linkedin.com/company/softwarebiobio"
-                   target="_blank"
-                   class="text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
-                  <i class="fa-brands fa-linkedin text-lg"></i>
-                  <span class="ml-2 text-sm font-light">LinkedIn</span>
-                </a>
-                <a href="https://github.com/softwarebiobio"
-                   target="_blank"
-                   class="text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
-                  <i class="fa-brands fa-github text-lg"></i>
-                  <span class="ml-2 text-sm font-light">GitHub</span>
-                </a>
+          </div>
+
+          <div
+            class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-8 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-4 h-4 text-slate-400/60" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M16,8 C16,10.21 14.21,12 12,12 C9.79,12 8,10.21 8,8 C8,5.79 9.79,4 12,4 C14.21,4 16,5.79 16,8 Z"
+                    stroke="currentColor" stroke-width="1" />
+                  <path d="M20,19 C20,15.5 16.5,13 12,13 C7.5,13 4,15.5 4,19" stroke="currentColor"
+                        stroke-width="1" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-normal mb-3 text-slate-400 tracking-tight">Redes Sociales</h3>
+                <div class="flex space-x-6">
+                  <a href="https://linkedin.com/company/softwarebiobio"
+                     target="_blank"
+                     class="text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
+                    <i class="fa-brands fa-linkedin text-lg"></i>
+                    <span class="ml-2 text-sm font-light">LinkedIn</span>
+                  </a>
+                  <a href="https://github.com/softwarebiobio"
+                     target="_blank"
+                     class="text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
+                    <i class="fa-brands fa-github text-lg"></i>
+                    <span class="ml-2 text-sm font-light">GitHub</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="clients" class="py-32 bg-slate-900 relative overflow-hidden">
+  <section id="clients" class="py-32 bg-slate-900 relative overflow-hidden">
 
-  <!-- Minimal decorative element -->
-  <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80rem] h-[80rem] bg-slate-500/2 rounded-full blur-3xl"></div>
+    <!-- Minimal decorative element -->
+    <div
+      class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80rem] h-[80rem] bg-slate-500/2 rounded-full blur-3xl"></div>
 
-  <div class="max-w-6xl mx-auto px-6 relative z-10">
-    <div class="text-center mb-24">
-      <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-6">
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-24">
+        <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-6">
         <span class="text-white">
           Nuestra Experiencia
         </span>
-      </h2>
-      <div class="w-20 h-px bg-slate-400/20 mx-auto mb-10"></div>
-      <p class="text-xl text-slate-100/60 max-w-2xl mx-auto font-light leading-relaxed">
-        Hemos sido el socio de desarrollo para grandes empresas, pymes, organismos públicos y universidades. 
-        Entendemos las necesidades y exigencias de cada sector.
-      </p>
-    </div>
-    <div class="flex flex-wrap justify-center items-center gap-10 max-w-4xl mx-auto">
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_btgconsulting.png" alt="Logo BTG Consulting"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </h2>
+        <div class="w-20 h-px bg-slate-400/20 mx-auto mb-10"></div>
+        <p class="text-xl text-slate-100/60 max-w-2xl mx-auto font-light leading-relaxed">
+          Hemos sido el socio de desarrollo para grandes empresas, pymes, organismos públicos y universidades.
+          Entendemos las necesidades y exigencias de cada sector.
+        </p>
       </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_municonce.png" alt="Logo Municipalidad de Concepción"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+      <div class="flex flex-wrap justify-center items-center gap-10 max-w-4xl mx-auto">
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_btgconsulting.png" alt="Logo BTG Consulting"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_municonce.png" alt="Logo Municipalidad de Concepción"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_copec.png" alt="Logo Copec"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_udec.png" alt="Logo Universidad de Concepción"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_cefop.png" alt="Logo Centro de Óptica y Fotónica"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_masjubilaciones.png" alt="Logo Masjubilaciones"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_mci.png" alt="Logo MCI Electronics"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_ucsc.png" alt="Logo Universidad Católica de la Santísima Concepción"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_cornershop.png"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80"
+               alt="Logo Uber">
+        </div>
+        <div
+          class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
+          <img src="images/logos/logo_woodtechms.png" alt="Logo WoodtechMS"
+               class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
+        </div>
       </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_copec.png" alt="Logo Copec"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
-      </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_udec.png" alt="Logo Universidad de Concepción"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
-      </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_cefop.png" alt="Logo Centro de Óptica y Fotónica"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
-      </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_masjubilaciones.png" alt="Logo Masjubilaciones"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
-      </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_mci.png" alt="Logo MCI Electronics"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
-      </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_ucsc.png" alt="Logo Universidad Católica de la Santísima Concepción"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
-      </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_cornershop.png"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80"
-             alt="Logo Uber">
-      </div>
-      <div
-        class="h-20 w-auto p-4 bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-        <img src="images/logos/logo_woodtechms.png" alt="Logo WoodtechMS"
-             class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
-      </div>
-    </div>
-</section>
+  </section>
 </main>
 
 <div id="modal"
-     class="fixed inset-0 bg-slate-900/80 backdrop-blur-lg hidden flex items-center justify-center z-50 transition-all" role="dialog" aria-modal="true" aria-labelledby="modal-message">
-  <div class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 max-w-md mx-4">
+     class="fixed inset-0 bg-slate-900/80 backdrop-blur-lg hidden flex items-center justify-center z-50 transition-all"
+     role="dialog" aria-modal="true" aria-labelledby="modal-message">
+  <div
+    class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 max-w-md mx-4">
     <p id="modal-message" class="text-center text-slate-300/60 font-light p-2 mb-10"></p>
     <button onclick="this.parentElement.parentElement.classList.add('hidden')"
             class="w-full px-10 py-4 bg-slate-500/10 backdrop-blur-sm rounded-lg border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 flex items-center justify-center">
@@ -826,7 +887,8 @@
 
 <footer class="bg-slate-900 text-slate-100 py-24 relative overflow-hidden">
 
-<div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-slate-500/2 rounded-full blur-3xl"></div>
+  <div
+    class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-slate-500/2 rounded-full blur-3xl"></div>
 
   <div class="max-w-6xl mx-auto px-6 relative z-10">
     <div class="grid md:grid-cols-3 gap-20">
@@ -1039,7 +1101,7 @@
       e.preventDefault()
       const target = document.querySelector(this.getAttribute('href'))
       if (target) {
-        const headerOffset = 80
+        const headerOffset = 10
         const elementPosition = target.getBoundingClientRect().top
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset
 
