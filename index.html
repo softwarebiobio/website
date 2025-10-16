@@ -122,7 +122,7 @@
       }
 
       .rotating {
-          animation: rotate 60s linear infinite;
+          animation: rotate 120s linear infinite;
       }
 
       .dash-animation {
@@ -203,11 +203,11 @@
   </style>
   <script data-goatcounter="https://softwarebiobio.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
-<body class="bg-slate-900 overflow-x-hidden">
+<body class="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 overflow-x-hidden">
 
 <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-<div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900" role="status"
+<div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-slate-900" role="status"
      aria-live="polite" aria-label="Cargando">
   <svg class="w-24 h-24" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
     <circle cx="50" cy="50" r="40" stroke="rgba(6, 182, 212, 0.2)" stroke-width="4" fill="none" />
@@ -220,7 +220,7 @@
 </div>
 
 <header
-  class="fixed w-full z-50 text-slate-100 bg-slate-800/50 dark:bg-slate-900/80 backdrop-blur border-b border-slate-700/5">
+  class="fixed w-full z-50 text-slate-700 dark:text-slate-100 bg-white/70 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700/5">
   <nav class="container text-transparent mx-auto px-8 flex justify-between items-center" role="navigation"
        aria-label="Main">
     <a href="#intro"
@@ -242,82 +242,83 @@
     <ul class="hidden md:flex space-x-10" role="menubar">
       <li role="none">
         <a href="#intro"
-           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-300 hover:text-slate-100 transition-colors duration-300"
+           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors duration-300"
            role="menuitem">
            <span class="relative flex items-center gap-2">
-             <i class="fa-solid fa-house text-slate-400/80 text-xs" aria-hidden="true"></i>
+             <i class="fa-solid fa-house text-slate-500/80 dark:text-slate-400/80 text-xs" aria-hidden="true"></i>
              <span>Inicio</span>
            </span>
         </a>
       </li>
       <li role="none">
         <a href="#services"
-           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-300 hover:text-slate-100 transition-colors duration-300"
+           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors duration-300"
            role="menuitem">
            <span class="relative flex items-center gap-2">
-             <i class="fa-solid fa-screwdriver-wrench text-slate-400/80 text-xs" aria-hidden="true"></i>
+             <i class="fa-solid fa-screwdriver-wrench text-slate-500/80 dark:text-slate-400/80 text-xs" aria-hidden="true"></i>
              <span>Servicios</span>
            </span>
         </a>
       </li>
       <li role="none">
         <a href="#clients"
-           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-300 hover:text-slate-100 transition-colors duration-300"
+           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors duration-300"
            role="menuitem">
            <span class="relative flex items-center gap-2">
-             <i class="fa-solid fa-users text-slate-400/80 text-xs" aria-hidden="true"></i>
+             <i class="fa-solid fa-users text-slate-500/80 dark:text-slate-400/80 text-xs" aria-hidden="true"></i>
              <span>Clientes</span>
            </span>
         </a>
       </li>
       <li role="none">
         <a href="#contact"
-           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-300 hover:text-slate-100 transition-colors duration-300"
+           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors duration-300"
            role="menuitem" aria-label="Ir a la sección de contacto">
            <span class="relative flex items-center gap-2">
-             <i class="fa-solid fa-envelope text-slate-300/80 text-base" aria-hidden="true"></i>
+             <i class="fa-solid fa-envelope text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
              Contacto
            </span>
         </a>
       </li>
     </ul>
+
   </nav>
 </header>
 
-<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-slate-900/95 backdrop-blur-lg z-40"
+<div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg z-40"
      aria-hidden="true">
   <div class="flex flex-col items-center justify-center h-full space-y-12">
     <a href="#intro"
-       class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
+       class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 relative group">
        <span class="flex items-center gap-3">
-         <i class="fa-solid fa-house text-slate-300/80 text-base" aria-hidden="true"></i>
+         <i class="fa-solid fa-house text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
          <span>Inicio</span>
        </span>
       <span
         class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#services"
-       class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duración-300 relative group">
+       class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duración-300 relative group">
        <span class="flex items-center gap-3">
-         <i class="fa-solid fa-screwdriver-wrench text-slate-300/80 text-base" aria-hidden="true"></i>
+         <i class="fa-solid fa-screwdriver-wrench text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
          <span>Servicios</span>
        </span>
       <span
         class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#clients"
-       class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
+       class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 relative group">
        <span class="flex items-center gap-3">
-         <i class="fa-solid fa-users text-slate-300/80 text-base" aria-hidden="true"></i>
+         <i class="fa-solid fa-users text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
          <span>Clientes</span>
        </span>
       <span
         class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#contact"
-       class="text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-400 transition-colors duration-300 relative group">
+       class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 relative group">
        <span class="flex items-center gap-3">
-         <i class="fa-solid fa-envelope text-slate-300/80 text-base" aria-hidden="true"></i>
+         <i class="fa-solid fa-envelope text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
          <span>Contacto</span>
        </span>
       <span
@@ -327,13 +328,13 @@
 </div>
 
 <main id="main-content" role="main" tabindex="-1">
-  <section id="intro" class="bg-slate-900 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+  <section id="intro" class="bg-gradient-to-b from-white to-sky-200 dark:from-slate-900 dark:to-slate-950 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
 
     <div
       class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-500/3 rounded-full blur-3xl"></div>
 
     <svg
-      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-slate-300/3"
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] text-sky-50 dark:text-slate-900"
       viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
       <g class="rotating" style="transform-origin: 50px 50px">
         <!-- Horizontal lines -->
@@ -364,23 +365,23 @@
     <div class="max-w-5xl mx-auto z-10 relative flex flex-col items-center justify-center" data-aos="fade-up">
       <div class="text-center mb-16">
         <h1 class="text-5xl md:text-7xl font-light text-slate-100 tracking-tight leading-none mb-6">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-white via-sky-300 block mb-2 drop-shadow-cyan-800 drop-shadow-xl">Soluciones informáticas</span>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-300 drop-shadow-yellow-800 drop-shadow-xl">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-sky-600 dark:from-slate-700 dark:to-slate-800 dark:from-white dark:via-sky-300 dark:to-white block mb-2 drop-shadow-sky-300 dark:drop-shadow-cyan-800 drop-shadow-md">Soluciones informáticas</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white dark:from-slate-700 to-amber-400 dark:from-white dark:to-yellow-300 drop-shadow-yellow-800 drop-shadow-md">
           a medida
         </span>
         </h1>
 
-        <p class="text-base md:text-lg lg:text-xl text-slate-300/70 max-w-3xl mx-auto leading-relaxed font-light mb-16">
+        <p class="text-base-200 md:text-lg lg:text-xl text-slate-600 dark:text-slate-300/70 max-w-3xl mx-auto leading-relaxed font-medium mb-16">
           Somos una consultora de desarrollo con más de 15 años de experiencia profesional en la industria,
           especializada en proyectos de
           electro-informática, telemetría y aplicaciones web de distinto tipo.
         </p>
 
         <a href="#contact" role="button"
-           class="button inline-block px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40">
-          <span class="text-slate-400 font-light text-sm tracking-wide">
+           class="button inline-block px-12 py-5 bg-amber-200 rounded-full border border-slate-200 transition-all duration-300 hover:bg-amber-100 dark:bg-slate-500/10 dark:border-slate-400/20 dark:hover:bg-slate-500/20 dark:hover:border-slate-400/40">
+          <span class="text-slate-700 dark:text-slate-400 font-light text-sm tracking-wide">
             INICIAR UNA CONVERSACIÓN
-            <i class="fa fa-rocket text-slate-300/80" aria-hidden="true"></i>
+            <i class="fa fa-rocket text-slate-500/80 dark:text-slate-300/80" aria-hidden="true"></i>
           </span>
         </a>
       </div>
@@ -389,9 +390,9 @@
     </div>
     <a href="#services">
       <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20 cursor-help">
-        <span class="text-slate-400/40 text-xs tracking-wide mb-3 font-light">DESCUBRIR</span>
+        <span class="text-slate-500/60 dark:text-slate-400/40 text-xs tracking-wide mb-3 font-light">DESCUBRIR</span>
 
-        <svg class="w-6 h-10 text-slate-400/30" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+        <svg class="w-6 h-10 text-slate-500/40 dark:text-slate-400/30" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg"
              aria-hidden="true" focusable="false">
           <rect x="11" y="0" width="2" height="40" rx="1" fill="currentColor" opacity="0.3" />
           <circle cx="12" cy="33" r="8" fill="currentColor" class="animate-bounce" />
@@ -401,7 +402,7 @@
     </a>
   </section>
 
-  <section id="services" class="min-h-screen bg-slate-900 py-32 relative overflow-hidden">
+  <section id="services" class="min-h-screen bg-sky-200 dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900 py-32 relative overflow-hidden">
 
     <!-- Minimal decorative elements -->
     <div
@@ -410,7 +411,7 @@
     <div class="max-w-6xl mx-auto px-6 relative z-10">
       <div class="text-center mb-28">
         <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-4">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-white">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-400 dark:to-white">
           Qué Hacemos
         </span>
         </h2>
@@ -652,7 +653,7 @@
     </div>
   </section>
 
-  <section id="contact" class="py-32 bg-slate-900 text-slate-100 relative overflow-hidden">
+  <section id="contact" class="py-32 bg-emerald-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 relative overflow-hidden">
 
     <!-- Minimal decorative element -->
     <div
@@ -660,13 +661,13 @@
 
     <div class="max-w-6xl mx-auto px-6 relative z-10">
       <div class="text-center mb-24">
-        <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-6">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-white via-white">
+        <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-900 dark:text-slate-100 mb-6">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900 dark:from-sky-200 dark:to-white">
           ¿Tiene un Desafío Tecnológico?
         </span>
         </h2>
         <div class="w-20 h-px bg-slate-400/20 mx-auto mb-10"></div>
-        <p class="text-xl text-slate-300/60 max-w-2xl mx-auto font-light leading-relaxed">
+        <p class="text-xl text-slate-600 dark:text-slate-300/60 max-w-2xl mx-auto font-light leading-relaxed">
           Inicie una conversación con nosotros y descubra cómo podemos ayudarle a resolver sus desafíos tecnológicos.
         </p>
       </div>
@@ -797,7 +798,7 @@
     </div>
   </section>
 
-  <section id="clients" class="py-32 bg-slate-900 relative overflow-hidden">
+  <section id="clients" class="py-32 bg-violet-50 dark:bg-slate-900 relative overflow-hidden">
 
     <!-- Minimal decorative element -->
     <div
@@ -805,13 +806,13 @@
 
     <div class="max-w-6xl mx-auto px-6 relative z-10">
       <div class="text-center mb-24">
-        <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-6">
-        <span class="text-white">
+        <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-900 dark:text-slate-100 mb-6">
+        <span class="text-slate-900 dark:text-white">
           Nuestra Experiencia
         </span>
         </h2>
         <div class="w-20 h-px bg-slate-400/20 mx-auto mb-10"></div>
-        <p class="text-xl text-slate-100/60 max-w-2xl mx-auto font-light leading-relaxed">
+        <p class="text-xl text-slate-600 dark:text-slate-100/60 max-w-2xl mx-auto font-light leading-relaxed">
           Hemos sido el socio de desarrollo para grandes empresas, pymes, organismos públicos y universidades.
           Entendemos las necesidades y exigencias de cada sector.
         </p>
@@ -869,6 +870,7 @@
                class="h-full w-auto brightness-0 invert opacity-50 transition-all duration-300 hover:opacity-80">
         </div>
       </div>
+    </div>
   </section>
 </main>
 
@@ -1144,5 +1146,28 @@
   document.body.appendChild(script)
 </script>
 
+<script>
+(function(){
+  const btn=document.getElementById('theme-toggle');
+  if(!btn) return;
+  function sync(){
+    const isDark=document.documentElement.classList.contains('dark');
+    btn.setAttribute('aria-pressed', String(isDark));
+    const sun=btn.querySelector('.i-light');
+    const moon=btn.querySelector('.i-dark');
+    if(sun&&moon){
+      if(isDark){ sun.classList.add('hidden'); moon.classList.remove('hidden'); }
+      else { sun.classList.remove('hidden'); moon.classList.add('hidden'); }
+    }
+  }
+  btn.addEventListener('click', function(){
+    const html=document.documentElement;
+    const isDark=html.classList.toggle('dark');
+    try{ localStorage.setItem('theme', isDark ? 'dark' : 'light'); }catch(e){}
+    sync();
+  });
+  sync();
+})();
+</script>
 </body>
 </html>
