@@ -1029,6 +1029,15 @@
   .text-sky-400 {
     color: var(--color-sky-400);
   }
+  .text-slate-200 {
+    color: var(--color-slate-200);
+  }
+  .text-slate-200\/30 {
+    color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-slate-200) 30%, transparent);
+    }
+  }
   .text-slate-400 {
     color: var(--color-slate-400);
   }
@@ -1040,6 +1049,12 @@
   }
   .text-slate-500 {
     color: var(--color-slate-500);
+  }
+  .text-slate-500\/30 {
+    color: color-mix(in srgb, oklch(55.4% 0.046 257.417) 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-slate-500) 30%, transparent);
+    }
   }
   .text-slate-500\/40 {
     color: color-mix(in srgb, oklch(55.4% 0.046 257.417) 40%, transparent);
@@ -1681,6 +1696,11 @@
       @supports (color: color-mix(in lab, red, red)) {
         color: color-mix(in oklab, var(--color-slate-400) 80%, transparent);
       }
+    }
+  }
+  .dark\:text-slate-800 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-slate-800);
     }
   }
   .dark\:text-slate-900 {
