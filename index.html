@@ -220,7 +220,7 @@
 </div>
 
 <header
-  class="fixed w-full z-50 text-slate-700 dark:text-slate-100 bg-white/70 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700/5">
+  class="fixed w-full z-50 text-slate-700 dark:text-slate-100 bg-white/70 dark:bg-slate-900/80 backdrop-blur border-b border-transparent dark:border-slate-700/5">
   <nav class="container text-transparent mx-auto px-8 flex justify-between items-center" role="navigation"
        aria-label="Main">
     <a href="#intro"
@@ -272,10 +272,10 @@
       </li>
       <li role="none">
         <a href="#contact"
-           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-slate-100 transition-colors duration-300"
+           class="py-2 px-1 relative font-light text-sm md:text-md xl:text-lg text-slate-600 hover:text-slate-900 dark:text-white text-white dark:text-slate-300 dark:hover:dark:text-slate-100 transition-colors duration-300"
            role="menuitem" aria-label="Ir a la sección de contacto">
            <span class="relative flex items-center gap-2">
-             <i class="fa-solid fa-envelope text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
+             <i class="fa-solid fa-envelope text-slate-500/80 dark:text-white text-white dark:text-slate-300/80 text-base" aria-hidden="true"></i>
              Contacto
            </span>
         </a>
@@ -291,16 +291,16 @@
     <a href="#intro"
        class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 relative group">
        <span class="flex items-center gap-3">
-         <i class="fa-solid fa-house text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
+         <i class="fa-solid fa-house text-slate-500/80 dark:text-slate-400/80 text-base" aria-hidden="true"></i>
          <span>Inicio</span>
        </span>
       <span
         class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-slate-400 group-hover:w-full transition-all duration-300"></span>
     </a>
     <a href="#services"
-       class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duración-300 relative group">
+       class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 relative group">
        <span class="flex items-center gap-3">
-         <i class="fa-solid fa-screwdriver-wrench text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
+         <i class="fa-solid fa-screwdriver-wrench text-slate-500/80 dark:text-slate-400/80 text-base" aria-hidden="true"></i>
          <span>Servicios</span>
        </span>
       <span
@@ -309,7 +309,7 @@
     <a href="#clients"
        class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 relative group">
        <span class="flex items-center gap-3">
-         <i class="fa-solid fa-users text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
+         <i class="fa-solid fa-users text-slate-500/80 dark:text-slate-400/80 text-base" aria-hidden="true"></i>
          <span>Clientes</span>
        </span>
       <span
@@ -318,7 +318,7 @@
     <a href="#contact"
        class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 relative group">
        <span class="flex items-center gap-3">
-         <i class="fa-solid fa-envelope text-slate-500/80 dark:text-slate-300/80 text-base" aria-hidden="true"></i>
+         <i class="fa-solid fa-envelope text-slate-500/80 dark:text-slate-400/80 text-base" aria-hidden="true"></i>
          <span>Contacto</span>
        </span>
       <span
@@ -328,7 +328,7 @@
 </div>
 
 <main id="main-content" role="main" tabindex="-1">
-  <section id="intro" class="bg-gradient-to-b from-white to-sky-200 dark:from-slate-900 dark:to-slate-950 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+  <section id="intro" class="bg-gradient-to-b from-white to-[#def]  dark:from-slate-900 dark:to-slate-950 min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
 
     <div
       class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-slate-500/3 rounded-full blur-3xl"></div>
@@ -364,24 +364,22 @@
     </svg>
     <div class="max-w-5xl mx-auto z-10 relative flex flex-col items-center justify-center" data-aos="fade-up">
       <div class="text-center mb-16">
-        <h1 class="text-5xl md:text-7xl font-light text-slate-100 tracking-tight leading-none mb-6">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-sky-600 dark:from-slate-700 dark:to-slate-800 dark:from-white dark:via-sky-300 dark:to-white block mb-2 drop-shadow-sky-300 dark:drop-shadow-cyan-800 drop-shadow-md">Soluciones informáticas</span>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white dark:from-slate-700 to-amber-400 dark:from-white dark:to-yellow-300 drop-shadow-yellow-800 drop-shadow-md">
+        <h1 class="text-5xl md:text-7xl font-light dark:text-slate-100 tracking-tight leading-none mb-6">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-sky-600 dark:from-white dark:via-sky-300 dark:to-white block mb-2 drop-shadow-md dark:drop-shadow-cyan-800">Soluciones informáticas</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400 dark:from-white dark:to-yellow-300 drop-shadow-md">
           a medida
         </span>
         </h1>
 
-        <p class="text-base-200 md:text-lg lg:text-xl text-slate-600 dark:text-slate-300/70 max-w-3xl mx-auto leading-relaxed font-medium mb-16">
-          Somos una consultora de desarrollo con más de 15 años de experiencia profesional en la industria,
-          especializada en proyectos de
-          electro-informática, telemetría y aplicaciones web de distinto tipo.
+        <p class="md:text-lg lg:text-xl text-slate-600 dark:text-slate-300/70 max-w-3xl mx-auto leading-relaxed font-medium mb-16">
+          Tenemos más de 15 años de experiencia profesional de alto impacto en proyectos de telemetría, electro-informática y aplicaciones web de distinto tipo.
         </p>
 
         <a href="#contact" role="button"
            class="button inline-block px-12 py-5 bg-amber-200 rounded-full border border-slate-200 transition-all duration-300 hover:bg-amber-100 dark:bg-slate-500/10 dark:border-slate-400/20 dark:hover:bg-slate-500/20 dark:hover:border-slate-400/40">
           <span class="text-slate-700 dark:text-slate-400 font-light text-sm tracking-wide">
             INICIAR UNA CONVERSACIÓN
-            <i class="fa fa-rocket text-slate-500/80 dark:text-slate-300/80" aria-hidden="true"></i>
+            <i class="fa fa-rocket text-slate-500/80 dark:text-slate-400/80" aria-hidden="true"></i>
           </span>
         </a>
       </div>
@@ -402,7 +400,7 @@
     </a>
   </section>
 
-  <section id="services" class="min-h-screen bg-sky-200 dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900 py-32 relative overflow-hidden">
+  <section id="services" class="min-h-screen bg-[#def] dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900 py-32 relative overflow-hidden">
 
     <!-- Minimal decorative elements -->
     <div
@@ -410,7 +408,7 @@
 
     <div class="max-w-6xl mx-auto px-6 relative z-10">
       <div class="text-center mb-28">
-        <h2 class="text-4xl md:text-6xl font-light tracking-tight text-slate-100 mb-4">
+        <h2 class="text-4xl md:text-6xl font-light tracking-tight dark:text-slate-100 mb-4">
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-400 dark:to-white">
           Qué Hacemos
         </span>
@@ -422,66 +420,69 @@
       <div class="mb-40 relative">
         <div class="flex flex-col md:flex-row items-start gap-20">
           <div class="md:w-1/3 flex-shrink-0">
-            <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-white via-white">Electro-Informática</span>
+            <h3 class="text-3xl md:text-4xl font-light dark:text-slate-100 mb-6 tracking-tight">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-amber-400 drop-shadow-md">Electro-Informática</span>
             </h3>
 
-            <p class="text-slate-300/60 font-light text-base leading-relaxed">
-              Desde el firmware hasta la plataforma de usuario, incluyendo la infraestructura. Usted obtiene una
-              solución
+            <p class="text-base-content dark:text-slate-300/60 leading-relaxed">
+              Desde el firmware hasta la plataforma de usuario, incluyendo la infraestructura. Usted obtiene una solución
               a medida para resolver su desafío.
             </p>
           </div>
 
           <div
-            class="md:w-2/3 bg-slate-800/50 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
-            <h4 class="text-xl md:text-2xl font-light text-white mb-8 tracking-tight">Integración de Dispositivos y
+            class="md:w-2/3 bg-sky-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-xl p-12 shadow-inner shadow-slate-400 dark:shadow-black dark:shadow-inner transition-all duration-300 hover:border-slate-400/10">
+            <h4 class="text-xl md:text-2xl font-light text-base mb-8 tracking-tight">Integración de Dispositivos y
               Protocolos</h4>
-            <p class="text-slate-300/60 font-light mb-12 text-base">
+            <p class="text-slate-600 dark:text-slate-300 font-light mb-12">
               Hacemos que sus equipos se entiendan, traduciendo datos entre dispositivos y sistemas.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div class="flex items-start">
                 <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fa-solid fa-satellite text-amber-400/60 text-xs"></i>
+                  <i class="fa-solid fa-satellite text-sky-400 dark:text-amber-400/60 text-xl"></i>
                 </div>
                 <div>
-                  <h5 class="text-slate-100 font-normal mb-3 text-base">Monitoreo</h5>
-                  <p class="text-slate-300/50 font-light text-sm leading-relaxed">Visualización instantánea del estado
+                  <h5 class="dark:text-slate-100 font-normal mb-3 text-base">Monitoreo</h5>
+                  <p class="text-slate-600 dark:text-slate-300 font-light text-sm leading-relaxed">Visualización
+                    instantánea del estado
                     de su operación</p>
                 </div>
               </div>
 
               <div class="flex items-start">
                 <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fa-solid fa-right-left text-amber-400/60 text-xs"></i>
+                  <i class="fa-solid fa-right-left text-sky-400 dark:text-amber-400/60 text-xl"></i>
                 </div>
                 <div>
-                  <h5 class="text-slate-100 font-normal mb-3 text-base">Integración</h5>
-                  <p class="text-slate-300/50 font-light text-sm leading-relaxed">Conectando sistemas usando estándares
+                  <h5 class="dark:text-slate-100 font-normal mb-3 text-base">Integración</h5>
+                  <p class="text-slate-600 dark:text-slate-300 font-light text-sm leading-relaxed">Conectando sistemas
+                    usando estándares
                     y protocolos</p>
                 </div>
               </div>
 
               <div class="flex items-start">
                 <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fa-solid fa-chart-line text-amber-400/60 text-xs"></i>
+                  <i class="fa-solid fa-chart-line text-sky-400 dark:text-amber-400/60 text-xl"></i>
                 </div>
                 <div>
-                  <h5 class="text-slate-100 font-normal mb-3 text-base">Análisis</h5>
-                  <p class="text-slate-300/50 font-light text-sm leading-relaxed">Transformando datos brutos en
+                  <h5 class="dark:text-slate-100 font-normal mb-3 text-base">Análisis</h5>
+                  <p class="text-slate-600 dark:text-slate-300 font-light text-sm leading-relaxed">Transformando datos
+                    brutos en
                     información útil</p>
                 </div>
               </div>
 
               <div class="flex items-start">
                 <div class="flex-shrink-0 w-8 h-8 bg-slate-500/5 rounded-lg flex items-center justify-center mr-4">
-                  <i class="fa-solid fa-bell text-amber-400/60 text-xs"></i>
+                  <i class="fa-solid fa-bell text-sky-400 dark:text-amber-400/60 text-xl"></i>
                 </div>
                 <div>
-                  <h5 class="text-slate-100 font-normal mb-3 text-base">Alertas</h5>
-                  <p class="text-slate-300/50 font-light text-sm leading-relaxed">Notificando eventos recolectados en
+                  <h5 class="dark:text-slate-100 font-normal mb-3 text-base">Alertas</h5>
+                  <p class="text-slate-600 dark:text-slate-300 font-light text-sm leading-relaxed">Notificando eventos
+                    recolectados en
                     entornos de operación</p>
                 </div>
               </div>
@@ -494,11 +495,11 @@
       <div class="mb-40 relative">
         <div class="flex flex-col md:flex-row-reverse items-start gap-20">
           <div class="md:w-1/3 flex-shrink-0">
-            <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400 via-white">Aplicaciones Web y Sistemas</span>
+            <h3 class="text-3xl md:text-4xl font-light dark:text-slate-100 mb-6 tracking-tight">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-amber-400">Aplicaciones Web y Sistemas</span>
             </h3>
 
-            <p class="text-slate-300/60 font-light text-base leading-relaxed">
+            <p class="text-white dark:text-slate-300/60 font-light text-base leading-relaxed">
               Creamos plataformas de gestión, microservicios, dashboards, gestores de contenido personalizado,
               APIs robustas y más. Nuestra experiencia abarca desde startups hasta sistemas a gran escala.
             </p>
@@ -509,11 +510,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
               <div>
                 <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Desarrollo Full-Stack</h4>
-                <p class="text-slate-300/60 font-light mb-8 text-base">
+                <p class="text-white dark:text-slate-300/60 font-light mb-8 text-base">
                   Desarrollamos sistemas que impulsan la gestión y sus operaciones
                 </p>
 
-                <ul class="text-slate-300/50 space-y-5 font-light text-sm">
+                <ul class="text-white dark:text-slate-300/50 space-y-5 font-light text-sm">
                   <li class="flex items-center">
                     <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span>
                     <span>Arquitectura y Desarrollo</span>
@@ -531,11 +532,11 @@
 
               <div>
                 <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Arquitectura de Sistemas</h4>
-                <p class="text-slate-300/60 font-light mb-8 text-base">
+                <p class="text-white dark:text-slate-300/60 font-light mb-8 text-base">
                   Estamos capacitados para entender y evolucionar la tecnología de su negocio.
                 </p>
 
-                <ul class="text-slate-300/50 space-y-5 font-light text-sm">
+                <ul class="text-white dark:text-slate-300/50 space-y-5 font-light text-sm">
                   <li class="flex items-center">
                     <span class="w-1.5 h-1.5 rounded-full bg-slate-400/40 mr-3"></span>
                     <span>Modelamiento de datos</span>
@@ -559,11 +560,11 @@
       <div class="mb-40 relative">
         <div class="flex flex-col md:flex-row items-start gap-20">
           <div class="md:w-1/3 flex-shrink-0">
-            <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-amber-400 via-white">Consultorías y Servicios</span>
+            <h3 class="text-3xl md:text-4xl font-light dark:text-slate-100 mb-6 tracking-tight">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-amber-400">Consultorías y Servicios</span>
             </h3>
 
-            <p class="text-slate-300/60 font-light text-base leading-relaxed">
+            <p class="text-white dark:text-slate-300/60 font-light text-base leading-relaxed">
               Le ayudamos a definir la mejor estrategia tecnológica para su proyecto. Aportamos más de 15 años de
               experiencia
               en diferentes industrias para asegurar que su inversión sea sólida y escalable.
@@ -576,12 +577,12 @@
               <div>
                 <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Asesoría y Arquitectura de
                   Soluciones</h4>
-                <p class="text-slate-300/60 font-light mb-8 text-base">
+                <p class="text-white dark:text-slate-300/60 font-light mb-8 text-base">
                   Le guiamos para tomar las decisiones tecnológicas correctas, asegurando la factibilidad de su
                   proyecto.
                 </p>
 
-                <ul class="text-slate-300/50 space-y-5 font-light text-sm">
+                <ul class="text-white dark:text-slate-300/50 space-y-5 font-light text-sm">
                   <li class="flex items-center">
                     <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span>
                     <span>Evaluación de tecnologías</span>
@@ -600,12 +601,12 @@
               <div>
                 <h4 class="text-xl md:text-2xl font-light text-white mb-6 tracking-tight">Despliegue y Soporte
                   Experto</h4>
-                <p class="text-slate-300/60 font-light mb-8 text-base">
+                <p class="text-white dark:text-slate-300/60 font-light mb-8 text-base">
                   Integramos la gestión de servidores privados, VPS y servicios Cloud con operación y
                   soporte técnico directo, sin intermediarios.
                 </p>
 
-                <ul class="text-slate-300/50 space-y-5 font-light text-sm">
+                <ul class="text-white dark:text-slate-300/50 space-y-5 font-light text-sm">
                   <li class="flex items-center">
                     <span class="w-1.5 h-1.5 rounded-full bg-amber-400/40 mr-3"></span>
                     <span>Alojamiento web y correo corporativo</span>
@@ -629,19 +630,19 @@
       <div class="mt-40 text-center">
         <div
           class="bg-slate-950/30 backdrop-blur-sm rounded-xl p-16 border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10 max-w-4xl mx-auto">
-          <h3 class="text-3xl md:text-4xl font-light text-slate-100 mb-6 tracking-tight">
+          <h3 class="text-3xl md:text-4xl font-light dark:text-slate-100 mb-6 tracking-tight">
             <span
               class="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-500">Nuestro Compromiso:</span>
             Responsabilidad Integral
           </h3>
 
-          <p class="text-slate-300/60 font-light text-xl max-w-3xl mx-auto leading-relaxed mb-16">
+          <p class="text-white dark:text-slate-300/60 font-light text-xl max-w-3xl mx-auto leading-relaxed mb-16">
             Asumimos el desarrollo completo, desde el hardware hasta el software, incluyendo la infraestructura. Esto
             garantiza una solución cohesiva y un único punto de contacto responsable.
           </p>
 
           <a href="#contact" role="button"
-             class="button flex px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300  hover:bg-slate-500/20 hover:border-slate-400/40 items-center justify-center">
+             class="button flex px-12 py-5 bg-slate-500/10 backdrop-blur-sm rounded-full border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 items-center justify-center">
             <span class="text-slate-400 font-light text-sm tracking-wide mr-3">¿TIENE UN DESAFÍO TECNOLÓGICO?</span>
             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
                  focusable="false">
@@ -681,33 +682,33 @@
           </h3>
           <form id="softwarebiobio-contacto" netlify class="space-y-8">
             <div>
-              <label for="name" class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Nombre</label>
+              <label for="name" class="block text-sm font-light mb-2 text-white dark:text-slate-300/60 tracking-tight">Nombre</label>
               <input type="text"
                      id="name"
                      name="name"
                      required
-                     class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
+                     class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors dark:text-slate-100 font-light"
                      placeholder="Su nombre completo">
             </div>
 
             <div>
-              <label for="email" class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Email</label>
+              <label for="email" class="block text-sm font-light mb-2 text-white dark:text-slate-300/60 tracking-tight">Email</label>
               <input type="email"
                      id="email"
                      name="email"
                      required
-                     class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
+                     class="w-full px-5 py-3 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors dark:text-slate-100 font-light"
                      placeholder="su@email.com (le responderemos)">
             </div>
 
             <div>
               <label for="message"
-                     class="block text-sm font-light mb-2 text-slate-300/60 tracking-tight">Mensaje</label>
+                     class="block text-sm font-light mb-2 text-white dark:text-slate-300/60 tracking-tight">Mensaje</label>
               <textarea id="message"
                         name="message"
                         required
                         rows="4"
-                        class="w-full px-5 py-4 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors text-slate-100 font-light"
+                        class="w-full px-5 py-4 rounded-lg bg-slate-800/50 border border-slate-700/70 focus:border-slate-400/30 focus:ring-1 focus:ring-slate-400/20 transition-colors dark:text-slate-100 font-light"
                         placeholder="Cuéntenos brevemente sobre su proyecto..."></textarea>
             </div>
 
@@ -735,7 +736,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-normal mb-2 text-slate-400 tracking-tight">Ubicación</h3>
-                <p class="text-slate-300/60 font-light">
+                <p class="text-white dark:text-slate-300/60 font-light">
                   Concepción, Región del Biobío, Chile
                 </p>
               </div>
@@ -755,7 +756,7 @@
               </div>
               <div>
                 <h3 class="text-lg font-normal mb-2 text-slate-400 tracking-tight">Contacto Directo</h3>
-                <p class="text-slate-300/60 font-light">
+                <p class="text-white dark:text-slate-300/60 font-light">
                   contacto@softwarebiobio.com
                 </p>
               </div>
@@ -779,13 +780,13 @@
                 <div class="flex space-x-6">
                   <a href="https://linkedin.com/company/softwarebiobio"
                      target="_blank"
-                     class="text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
+                     class="text-white dark:text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
                     <i class="fa-brands fa-linkedin text-lg"></i>
                     <span class="ml-2 text-sm font-light">LinkedIn</span>
                   </a>
                   <a href="https://github.com/softwarebiobio"
                      target="_blank"
-                     class="text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
+                     class="text-white dark:text-slate-300/60 hover:text-slate-400 transition-colors duration-300 flex items-center">
                     <i class="fa-brands fa-github text-lg"></i>
                     <span class="ml-2 text-sm font-light">GitHub</span>
                   </a>
@@ -879,7 +880,7 @@
      role="dialog" aria-modal="true" aria-labelledby="modal-message">
   <div
     class="bg-slate-800/30 backdrop-blur-sm rounded-xl p-12 border border-slate-700/5 transition-all duration-300 max-w-md mx-4">
-    <p id="modal-message" class="text-center text-slate-300/60 font-light p-2 mb-10"></p>
+    <p id="modal-message" class="text-center text-white dark:text-slate-300/60 font-light p-2 mb-10"></p>
     <button onclick="this.parentElement.parentElement.classList.add('hidden')"
             class="w-full px-10 py-4 bg-slate-500/10 backdrop-blur-sm rounded-lg border border-slate-400/20 transition-all duration-300 hover:bg-slate-500/20 hover:border-slate-400/40 flex items-center justify-center">
       <span class="text-cyan-400 font-light tracking-wide text-sm">CERRAR</span>
@@ -887,7 +888,7 @@
   </div>
 </div>
 
-<footer class="bg-slate-900 text-slate-100 py-24 relative overflow-hidden">
+<footer class="bg-slate-900 dark:text-slate-100 py-24 relative overflow-hidden">
 
   <div
     class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-slate-500/2 rounded-full blur-3xl"></div>
@@ -901,7 +902,7 @@
             Software BioBio
           </h3>
         </div>
-        <p class="text-slate-300/50 font-light text-sm leading-relaxed">
+        <p class="text-white dark:text-slate-300/50 font-light text-sm leading-relaxed">
           Transformando ideas en soluciones tecnológicas innovadoras desde el corazón de la región del Biobío.
         </p>
         <p class="text-slate-400/30 font-light text-xs">
@@ -917,28 +918,28 @@
         <ul class="space-y-4">
           <li>
             <a href="#intro"
-               class="text-slate-300/50 hover:text-amber-400 transition-colors duration-300 font-light text-sm flex items-center">
+               class="text-white dark:text-slate-300/50 hover:text-amber-400 transition-colors duration-300 font-light text-sm flex items-center">
               <span class="w-1 h-1 bg-slate-400/30 rounded-full mr-2"></span>
               Inicio
             </a>
           </li>
           <li>
             <a href="#services"
-               class="text-slate-300/50 hover:text-amber-400 transition-colors duration-300 font-light text-sm flex items-center">
+               class="text-white dark:text-slate-300/50 hover:text-amber-400 transition-colors duration-300 font-light text-sm flex items-center">
               <span class="w-1 h-1 bg-slate-400/30 rounded-full mr-2"></span>
               Servicios
             </a>
           </li>
           <li>
             <a href="#clients"
-               class="text-slate-300/50 hover:text-amber-400 transition-colors duration-300 font-light text-sm flex items-center">
+               class="text-white dark:text-slate-300/50 hover:text-amber-400 transition-colors duration-300 font-light text-sm flex items-center">
               <span class="w-1 h-1 bg-slate-400/30 rounded-full mr-2"></span>
               Clientes
             </a>
           </li>
           <li>
             <a href="#contact"
-               class="text-slate-300/50 hover:text-amber-400 transition-colors duration-300 font-light text-sm flex items-center">
+               class="text-white dark:text-slate-300/50 hover:text-amber-400 transition-colors duration-300 font-light text-sm flex items-center">
               <span class="w-1 h-1 bg-slate-400/30 rounded-full mr-2"></span>
               Contacto
             </a>
@@ -952,14 +953,14 @@
           Contacto
         </h4>
         <div class="space-y-4">
-          <p class="text-slate-300/50 font-light text-sm flex items-center">
+          <p class="text-white dark:text-slate-300/50 font-light text-sm flex items-center">
             <svg class="w-3 h-3 mr-2 text-white" viewBox="0 0 16 16" fill="none">
               <rect x="2" y="4" width="12" height="8" rx="1" stroke="currentColor" stroke-width="0.75" />
               <path d="M2,5 L8,9 L14,5" stroke="currentColor" stroke-width="0.75" />
             </svg>
             <span>contacto@softwarebiobio.com</span>
           </p>
-          <p class="text-slate-300/50 font-light text-sm flex items-center">
+          <p class="text-white dark:text-slate-300/50 font-light text-sm flex items-center">
             <svg class="w-3 h-3 mr-2 text-white" viewBox="0 0 16 16" fill="none">
               <path d="M8,2 C5,2 3,4 3,7 C3,11 8,14 8,14 C8,14 13,11 13,7 C13,4 11,2 8,2 Z"
                     stroke="currentColor" stroke-width="0.75" />
