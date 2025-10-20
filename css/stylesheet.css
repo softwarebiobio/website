@@ -29,6 +29,7 @@
     --color-sky-800: oklch(44.3% 0.11 240.79);
     --color-blue-100: oklch(93.2% 0.032 255.585);
     --color-blue-200: oklch(88.2% 0.059 254.128);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-violet-50: oklch(96.9% 0.016 293.756);
     --color-slate-50: oklch(98.4% 0.003 247.858);
@@ -691,6 +692,9 @@
   .border-slate-200 {
     border-color: var(--color-slate-200);
   }
+  .border-slate-300 {
+    border-color: var(--color-slate-300);
+  }
   .border-slate-400 {
     border-color: var(--color-slate-400);
   }
@@ -720,6 +724,9 @@
   }
   .bg-\[\#def\] {
     background-color: #def;
+  }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
   }
   .bg-amber-200 {
     background-color: var(--color-amber-200);
@@ -762,6 +769,9 @@
   }
   .bg-sky-300 {
     background-color: var(--color-sky-300);
+  }
+  .bg-sky-400 {
+    background-color: var(--color-sky-400);
   }
   .bg-sky-600 {
     background-color: var(--color-sky-600);
@@ -1201,6 +1211,9 @@
   .text-black {
     color: var(--color-black);
   }
+  .text-blue-400 {
+    color: var(--color-blue-400);
+  }
   .text-cyan-400 {
     color: var(--color-cyan-400);
   }
@@ -1311,6 +1324,12 @@
     --tw-shadow-color: oklch(70.4% 0.04 256.788);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, var(--color-slate-400) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-slate-500 {
+    --tw-shadow-color: oklch(55.4% 0.046 257.417);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-slate-500) var(--tw-shadow-alpha), transparent);
     }
   }
   .shadow-slate-900 {
@@ -1476,6 +1495,13 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         opacity: 100%;
+      }
+    }
+  }
+  .hover\:border-amber-400 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-amber-400);
       }
     }
   }
@@ -1695,6 +1721,12 @@
       line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
+  .dark\:border-0 {
+    @media (prefers-color-scheme: dark) {
+      border-style: var(--tw-border-style);
+      border-width: 0px;
+    }
+  }
   .dark\:border-slate-400\/20 {
     @media (prefers-color-scheme: dark) {
       border-color: color-mix(in srgb, oklch(70.4% 0.04 256.788) 20%, transparent);
@@ -1709,6 +1741,11 @@
       @supports (color: color-mix(in lab, red, red)) {
         border-color: color-mix(in oklab, var(--color-slate-700) 5%, transparent);
       }
+    }
+  }
+  .dark\:border-slate-950 {
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--color-slate-950);
     }
   }
   .dark\:bg-slate-500\/10 {
@@ -1745,6 +1782,14 @@
       background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 95%, transparent);
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-slate-900) 95%, transparent);
+      }
+    }
+  }
+  .dark\:bg-slate-950\/30 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in srgb, oklch(12.9% 0.042 264.695) 30%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-slate-950) 30%, transparent);
       }
     }
   }
@@ -1795,6 +1840,12 @@
       --tw-gradient-via: var(--color-sky-300);
       --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
       --tw-gradient-stops: var(--tw-gradient-via-stops);
+    }
+  }
+  .dark\:to-slate-500 {
+    @media (prefers-color-scheme: dark) {
+      --tw-gradient-to: var(--color-slate-500);
+      --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     }
   }
   .dark\:to-slate-800 {
@@ -1879,6 +1930,11 @@
           color: color-mix(in oklab, var(--color-slate-300) 80%, transparent);
         }
       }
+    }
+  }
+  .dark\:text-amber-400 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-amber-400);
     }
   }
   .dark\:text-amber-400\/60 {
