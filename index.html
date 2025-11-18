@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,16 @@
 
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.softwarebiobio.com/">
+  <link rel="alternate" hreflang="es-cl" href="https://www.softwarebiobio.com/">
+  <link rel="alternate" hreflang="x-default" href="https://www.softwarebiobio.com/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Software BioBio - Tecnología a medida, Soluciones sensatas">
   <meta property="og:description"
         content="Creamos sistemas que conectan su operación física con el mundo digital. Telemetría, control y arquitectura de software de alto rendimiento.">
+  <meta property="og:site_name" content="Software BioBio">
   <meta property="og:image" content="https://www.softwarebiobio.com/images/og-image.jpg">
   <meta property="og:url" content="https://www.softwarebiobio.com/">
+  <meta property="og:locale" content="es_CL">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Software BioBio - Tecnología a medida, Soluciones sensatas">
   <meta name="twitter:description"
@@ -25,10 +29,35 @@
         content="software, desarrollo, telemetría, control, arquitectura, microservicios, backend, frontend, consultoría, tecnología, Biobío, Chile, soluciones digitales, sistemas, aplicaciones web, APIs, integración, monitoreo, tiempo real">
   <meta name="author" content="Software BioBio">
   <meta name="theme-color" content="#3b82f6">
+  <meta name="color-scheme" content="light dark">
+  <!-- Performance: reduce connection latency to third-party CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="/css/stylesheet.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Software BioBio",
+    "url": "https://www.softwarebiobio.com/",
+    "logo": "https://www.softwarebiobio.com/images/og-image.jpg",
+    "sameAs": [
+      "https://linkedin.com/company/softwarebiobio",
+      "https://github.com/softwarebiobio"
+    ]
+  }
+  </script>
   <style>
       @import url('https://fonts.googleapis.com/css2?family=Play:wght@300;400;500;600;700&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
@@ -239,7 +268,7 @@
 <header
   class="fixed w-full z-50 text-slate-700 dark:text-slate-100 bg-transparent backdrop-blur border-b border-transparent dark:border-slate-700/5">
   <nav class="container text-transparent mx-auto p-4 h-12 flex justify-between items-center" role="navigation"
-       aria-label="Main">
+       aria-label="Principal">
     <a href="#intro"
        class="text-md md:text-lg xl:text-2xl font-medium tracking-tight bg-clip-text bg-gradient-to-r from-slate-500 to-slate-400 "
        aria-label="Inicio">
@@ -303,7 +332,7 @@
 </header>
 
 <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg z-40"
-     aria-hidden="true">
+     role="dialog" aria-modal="true" aria-label="Menú" aria-hidden="true">
   <div class="flex flex-col items-center justify-center h-full space-y-12">
     <a href="#intro"
        class="text-slate-700 dark:text-slate-200/90 text-2xl py-3 font-light tracking-tight hover:text-amber-500 dark:hover:text-amber-400 transition-colors duration-300 relative group">
@@ -818,15 +847,15 @@
                 <h3 class="text-lg font-normal mb-3 tracking-tight">Redes Sociales</h3>
                 <div class="flex space-x-6">
                   <a href="https://linkedin.com/company/softwarebiobio"
-                     target="_blank"
+                     target="_blank" rel="noopener noreferrer"
                      class="text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-amber-400 transition-colors duration-300 flex items-center">
-                    <i class="fa-brands fa-linkedin text-lg"></i>
+                    <i class="fa-brands fa-linkedin text-lg" aria-hidden="true"></i>
                     <span class="ml-2 font-light">LinkedIn</span>
                   </a>
                   <a href="https://github.com/softwarebiobio"
-                     target="_blank"
+                     target="_blank" rel="noopener noreferrer"
                      class="text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-amber-400 transition-colors duration-300 flex items-center">
-                    <i class="fa-brands fa-github text-lg"></i>
+                    <i class="fa-brands fa-github text-lg" aria-hidden="true"></i>
                     <span class="ml-2 font-light">GitHub</span>
                   </a>
                 </div>
@@ -859,52 +888,62 @@
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_btgconsulting.png" alt="Logo BTG Consulting"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_municonce.png" alt="Logo Municipalidad de Concepción"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_copec.png" alt="Logo Copec"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_udec.png" alt="Logo Universidad de Concepción"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_cefop.png" alt="Logo Centro de Óptica y Fotónica"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_masjubilaciones.png" alt="Logo Masjubilaciones"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_mci.png" alt="Logo MCI Electronics"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_ucsc.png" alt="Logo Universidad Católica de la Santísima Concepción"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_cornershop.png"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80"
-               alt="Logo Uber">
+               loading="lazy" decoding="async"
+               alt="Logo Cornershop by Uber">
         </div>
         <div
           class="h-20 w-auto p-4 bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-lg border border-slate-700/5 transition-all duration-300 hover:border-slate-400/10">
           <img src="images/logos/logo_woodtechms.png" alt="Logo WoodtechMS"
+               loading="lazy" decoding="async"
                class="h-full w-auto dark:brightness-0 dark:invert transition-all duration-300 hover:opacity-80">
         </div>
       </div>
