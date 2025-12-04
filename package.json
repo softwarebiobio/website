@@ -4,5 +4,8 @@
   },
   "scripts": {
     "tailwindcss": "npx tailwindcss -c tailwind.config.js -o css/stylesheet.css -w"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17"
   }
 }
